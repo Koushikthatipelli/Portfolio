@@ -125,21 +125,18 @@ gsap.ticker.lagSmoothing(0);
             PROGRESS BAR
 ==================================================*/
 
-const progress=document.querySelector(".progress-bar span");
+const progress = document.querySelector(".progress-bar span");
 
-lenis.on("scroll",({scroll})=>{
+if (progress) {
+    lenis.on("scroll", ({ scroll }) => {
+        const pageHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
 
-    const pageHeight=
-
-    document.documentElement.scrollHeight-
-
-    window.innerHeight;
-
-    progress.style.width=
-
-    (scroll/pageHeight)*100+"%";
-
-});
+        progress.style.width =
+            (scroll / pageHeight) * 100 + "%";
+    });
+}
 
 /*==================================================
             CUSTOM CURSOR

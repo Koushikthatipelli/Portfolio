@@ -1,164 +1,156 @@
-# 🚀 Koushik Portfolio V3
+# Portfolio V3 🚀
 
-A premium, modern developer portfolio showcasing my projects, skills, and development journey. Built with a clean Apple-inspired design, smooth animations, and responsive layouts to provide an engaging user experience.
-
----
-
-## 🌐 Live Demo
-
-> Coming Soon
+A modern, responsive, and interactive personal portfolio website designed to showcase my skills, projects, and journey as a **Full Stack Developer**. The website features smooth scrolling, premium animations, custom interactions, and a clean UI inspired by modern design principles.
 
 ---
 
-## ✨ Features
+## 🌟 Features
 
-- Premium Apple-inspired UI
-- Fully Responsive Design
-- Smooth GSAP Animations
-- Lenis Smooth Scrolling
-- Custom Cursor
-- Interactive Project Pages
-- Glassmorphism Effects
-- Modern Typography
-- Optimized Performance
-- Clean Folder Structure
+* ✨ Modern and responsive UI
+* 🎯 Animated hero section
+* 🖱️ Custom animated cursor
+* ⚡ Smooth scrolling using Lenis
+* 🎬 GSAP & ScrollTrigger animations
+* 💻 Interactive Tech Stack section
+* 📂 Featured Projects showcase
+* 📈 Animated Statistics
+* 🎨 3D Card Tilt Effect
+* 🧲 Magnetic Buttons
+* 🖼️ Image Parallax Effects
+* 📱 Fully Responsive Design
+* 📞 Contact Section
+* 🚀 Page Transition Animations
 
 ---
 
-# 📂 Project Structure
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+
+### Libraries
+
+* GSAP
+* ScrollTrigger
+* Lenis
+* Font Awesome
+
+---
+
+## 📂 Folder Structure
 
 ```text
-portfolio/
-
+Portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+│
 ├── assets/
-│   ├── profile/
-│   ├── roadmap/
-│   ├── onedesk/
-│   ├── curaone/
-│   └── icons/
+│   ├── images/
+│   ├── icons/
+│   ├── fonts/
+│   └── videos/
 │
-├── css/
-│   ├── style.css
-│   ├── responsive.css
-│   └── project.css
-│
-├── js/
-│   ├── script.js
-│   └── project.js
-│
-├── projects/
-│   ├── roadmap.html
-│   ├── onedesk.html
-│   └── curaone.html
-│
-└── index.html
+└── README.md
 ```
 
 ---
 
-# 💻 Tech Stack
+## 🚀 Installation
 
-### Frontend
+Clone the repository
 
-- HTML5
-- CSS3
-- JavaScript
+```bash
+git clone https://github.com/your-username/portfolio.git
+```
 
-### Libraries
+Open the project
 
-- GSAP
-- ScrollTrigger
-- Lenis
+```bash
+cd portfolio
+```
 
-### Design
+Run using **VS Code Live Server**
 
-- Glassmorphism
-- Apple Inspired UI
-- Responsive Design
-- Modern Animations
+or
 
----
+Open
 
-# 🚀 Featured Projects
-
-## 🛣️ Roadmap.io
-
-A modern developer learning platform featuring:
-
-- Learning Roadmaps
-- Task Management
-- Notes
-- Project Tracking
-- Authentication
-- Dashboard
+```
+http://localhost:5500
+```
 
 ---
 
-## 💼 OneDesk
+## 💼 Sections
 
-A productivity workspace built to manage:
-
-- Daily Tasks
-- Notes
-- Projects
-- Dashboard
-- Productivity Analytics
-- Authentication
-
----
-
-## 🏥 CuraOne
-
-A modern Hospital Management Platform including:
-
-- Patient Portal
-- Doctor Dashboard
-- Pharmacy
-- Appointment Booking
-- Medical Records
-- Admin Panel
+* Hero
+* About Me
+* Statistics
+* Tech Stack
+* Featured Project
+* Projects
+* Journey
+* Contact
+* Footer
 
 ---
 
-# 📸 Screenshots
+## ✨ Animations Included
 
-Screenshots will be added soon.
+* Loader Animation
+* Hero Reveal Animation
+* Section Fade Animations
+* Floating Avatar
+* Project Hover Lift
+* Magnetic Buttons
+* Cursor Effects
+* Tech Icon Floating
+* Image Parallax
+* Scroll Progress Bar
+* Active Navigation
+* Page Transition
+* Counter Animation
+* 3D Card Tilt
 
 ---
 
-# 📈 Future Improvements
+## 📱 Responsive
 
-- Dark / Light Theme
-- Blog Section
-- AI Assistant
-- Interactive 3D Elements
-- More Project Case Studies
-- Performance Optimizations
+* Desktop
+* Laptop
+* Tablet
+* Mobile
 
 ---
 
-# 📬 Contact
+## 🎯 Future Improvements
+
+* Dark / Light Theme
+* Blog Section
+* Project Filtering
+* Admin Dashboard
+* Multi-language Support
+* Performance Optimization
+* Accessibility Improvements
+
+---
+
+## 👨‍💻 Author
 
 **Koushik Thatipelli**
 
-📧 Email: your-email@example.com
-
-💼 LinkedIn:
-https://www.linkedin.com/in/koushik-thatipelli-4b8188413/
-
-🐙 GitHub:
-https://github.com/Koushikthatipelli
+* GitHub: [https://github.com/Koushikthatipelli](https://github.com/Koushikthatipelli)
+* LinkedIn: [https://www.linkedin.com/in/koushik-thatipelli-4b8188413/](https://www.linkedin.com/in/koushik-thatipelli-4b8188413/)
 
 ---
 
-# ⭐ Support
+## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub.
-
-It helps and motivates me to build more awesome projects.
+If you like this project, consider giving it a **⭐ Star** on GitHub.
 
 ---
-
-## © 2026 Koushik Thatipelli
-
-Designed & Developed with ❤️ by Koushik.
