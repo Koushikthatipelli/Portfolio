@@ -199,57 +199,14 @@ LOADER
 /*==================================================
 CURSOR
 ==================================================*/
-
-.cursor{
-
-    position:fixed;
-
-    width:18px;
-
-    height:18px;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    border:0;
-
-    pointer-events:none;
-
-    transform:translate(-50%,-50%);
-
-    z-index:99999;
-
-    
-
+.cursor, .cursor-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%); /* Centers the custom element perfectly on your mouse */
+    pointer-events: none;             /* Prevents the custom cursor from blocking clicks on buttons */
+    z-index: 9999;                    /* Keeps it floating on top of everything else */
 }
-
-.cursor-blur{
-
-    position:fixed;
-
-    width:220px;
-
-    height:220px;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,
-
-    rgba(255,255,255,.12),
-
-    transparent 70%);
-
-    filter:blur(35px);
-
-    pointer-events:none;
-
-    transform:translate(-50%,-50%);
-
-    z-index:9998;
-
-}
-
 /*==================================================
 PROGRESS BAR
 ==================================================*/
