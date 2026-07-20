@@ -44,20 +44,14 @@ window.addEventListener("load", () => {
 
     },"-=.5")
 
-    .from(".hero-left > *",{
-
-        y:60,
-
-        opacity:0,
-
-        stagger:.12,
-
-        duration:.8,
-
-        ease:"power3.out"
-
-    },"-=.5")
-
+   .from(".hero-left > *", {
+    y:40,
+    opacity:0,
+    stagger:0.12,
+    duration:0.8,
+    ease:"power3.out",
+    clearProps:"all"
+}, "-=0.5")
     .from(".hero-center",{
 
         scale:.9,
@@ -140,115 +134,115 @@ lenis.on("scroll",({scroll})=>{
 
 });
 
-/*==================================================
-            APPLE CURSOR
-==================================================*/
+// /*==================================================
+//             APPLE CURSOR
+// ==================================================*/
 
-const cursor=document.querySelector(".cursor");
+// const cursor=document.querySelector(".cursor");
 
-const blur=document.querySelector(".cursor-blur");
+// const blur=document.querySelector(".cursor-blur");
 
-let mouseX=0;
+// let mouseX=0;
 
-let mouseY=0;
+// let mouseY=0;
 
-window.addEventListener("mousemove",(e)=>{
+// window.addEventListener("mousemove",(e)=>{
 
-    mouseX=e.clientX;
+//     mouseX=e.clientX;
 
-    mouseY=e.clientY;
+//     mouseY=e.clientY;
 
-});
+// });
 
-gsap.ticker.add(()=>{
+// gsap.ticker.add(()=>{
 
-    gsap.set(cursor,{
+//     gsap.set(cursor,{
 
-        x:mouseX,
+//         x:mouseX,
 
-        y:mouseY
+//         y:mouseY
 
-    });
+//     });
 
-    gsap.to(blur,{
+//     gsap.to(blur,{
 
-        x:mouseX,
+//         x:mouseX,
 
-        y:mouseY,
+//         y:mouseY,
 
-        duration:.45,
+//         duration:.45,
 
-        ease:"power3.out"
+//         ease:"power3.out"
 
-    });
+//     });
 
-});
+// });
 
-/*==================================================
-            CURSOR HOVER
-==================================================*/
+// /*==================================================
+//             CURSOR HOVER
+// ==================================================*/
 
-const cursorTargets=document.querySelectorAll(
+// const cursorTargets=document.querySelectorAll(
 
-"a,button,.tech-card,.stat-card,.hero-card,.project-item,.featured-project,.contact-item"
+// "a,button,.tech-card,.stat-card,.hero-card,.project-item,.featured-project,.contact-item"
 
-);
+// );
 
-cursorTargets.forEach(item=>{
+// cursorTargets.forEach(item=>{
 
-    item.addEventListener("mouseenter",()=>{
+//     item.addEventListener("mouseenter",()=>{
 
-        gsap.to(cursor,{
+//         gsap.to(cursor,{
 
-            width:56,
+//             width:56,
 
-            height:56,
+//             height:56,
 
-            background:"transparent",
+//             background:"transparent",
 
-            border:"2px solid #fff",
+//             border:"2px solid #fff",
 
-            duration:.25
+//             duration:.25
 
-        });
+//         });
 
-        gsap.to(blur,{
+//         gsap.to(blur,{
 
-            scale:1.4,
+//             scale:1.4,
 
-            duration:.3
+//             duration:.3
 
-        });
+//         });
 
-    });
+//     });
 
-    item.addEventListener("mouseleave",()=>{
+//     item.addEventListener("mouseleave",()=>{
 
-        gsap.to(cursor,{
+//         gsap.to(cursor,{
 
-            width:18,
+//             width:18,
 
-            height:18,
+//             height:18,
 
-            background:"#fff",
+//             background:"#fff",
 
-            border:"0px solid transparent",
+//             border:"0px solid transparent",
 
-            duration:.25
+//             duration:.25
 
-        });
+//         });
 
-        gsap.to(blur,{
+//         gsap.to(blur,{
 
-            scale:1,
+//             scale:1,
 
-            duration:.3
+//             duration:.3
 
-        });
+//         });
 
-    });
+//     });
 
-});
+// });
 /*==================================================
             HERO PARALLAX
 ==================================================*/

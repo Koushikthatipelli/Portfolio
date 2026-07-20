@@ -60,7 +60,7 @@ body{
 
     overflow-x:hidden;
 
-    cursor:none;
+    cursor:auto;
 
     line-height:1.6;
 
@@ -386,207 +386,164 @@ HEADER
 /*==================================================
 HERO
 ==================================================*/
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding-top:80px;
-
-}
+/*=========================================
+HERO LAYOUT
+=========================================*/
 
 .hero-container{
-
-    display:grid;
-
-    grid-template-columns:1fr 460px 280px;
-
-    gap:50px;
-
-    align-items:center;
-
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 90px;
+    min-height: calc(100vh - 100px);
+    position: relative;
 }
 
-.hero-left span{
+/*=========================================
+LEFT
+=========================================*/
 
-    display:inline-block;
-
-    padding:8px 16px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:999px;
-
-    font-size:11px;
-
-    letter-spacing:2px;
-
-    color:#a4a4a4;
-
-    margin-bottom:20px;
-
+.hero-left{
+    position: relative;
+    z-index: 2;
 }
 
-.hero-left h1{
+.hero-tag{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #a8a8a8;
+    margin-bottom: 18px;
+}
 
-    font-size:62px;
+.hero-title{
+    margin-bottom: 25px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: .9;
+    letter-spacing: -6px;
+}
 
-    line-height:.95;
+.hero-title span{
+    display: block;
+}
 
-    letter-spacing:-3px;
+.hero-title span:last-child{
+    color: #d8d8d8;
+}
 
-    font-family:'Space Grotesk',sans-serif;
+.hero-role{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #bcbcbc;
+}
 
-    margin-bottom:20px;
-
+.hero-role .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(255,255,255,.6);
 }
 
 .hero-left p{
-
-    max-width:470px;
-
-    color:var(--text);
-
-    font-size:16px;
-
-    line-height:1.8;
-
-    margin-bottom:28px;
-
+    max-width: 520px;
+    color: #9a9a9a;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 38px;
 }
+
+/*=========================================
+BUTTONS
+=========================================*/
 
 .hero-buttons{
-
-    display:flex;
-
-    gap:14px;
-
+    display: flex;
+    gap: 16px;
 }
 
-.primary-btn,
+/*=========================================
+STATS
+=========================================*/
 
-.secondary-btn{
-
-    padding:15px 26px;
-
-    border-radius:999px;
-
-    font-size:14px;
-
-    font-weight:600;
-
+.hero-stats{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 60px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
-.primary-btn{
-
-    background:#fff;
-
-    color:#000;
-
+.hero-stats h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 42px;
+    margin-bottom: 6px;
 }
 
-.secondary-btn{
-
-    border:1px solid rgba(255,255,255,.08);
-
+.hero-stats span{
+    font-size: 14px;
+    color: #888;
 }
+
+/*=========================================
+RIGHT
+=========================================*/
 
 .hero-center{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    display:flex;
+/*=========================================
+BACKGROUND TEXT
+=========================================*/
 
-    justify-content:center;
+.hero-bg-text{
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%,-50%);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 240px;
+    font-weight: 700;
+    letter-spacing: -12px;
+    color: rgba(255,255,255,.045);
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+}
 
+/*=========================================
+PHOTO
+=========================================*/
+
+.avatar-wrapper{
+    position: relative;
+    z-index: 2;
+    width: 470px;
 }
 
 .hero-avatar{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    border-radius:30px;
-
-    display:block;
-
+    width: 100%;
+    border-radius: 30px;
     box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
-
-    transition:.5s;
-
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 80px rgba(255,255,255,.03);
 }
 
-.hero-avatar:hover{
 
-    transform:translateY(-8px) scale(1.02);
-
-}
-
-#spline-container{
-
-    width:100%;
-
-    height:100%;
-
-}
-
-.hero-right{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    gap:18px;
-
-    width:280px;
-
-}
-
-.hero-card{
-
-    display:block;
-
-    padding:22px;
-
-    background:#0c0c0c;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:22px;
-
-}
-
-.hero-card span{
-
-    display:block;
-
-    font-size:10px;
-
-    color:#888;
-
-    letter-spacing:2px;
-
-    margin-bottom:10px;
-
-}
-
-.hero-card h3{
-
-    font-size:19px;
-
-    line-height:1.4;
-
-    font-family:'Space Grotesk',sans-serif;
-
-}
 /*==================================================
 ABOUT
 ==================================================*/
