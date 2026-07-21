@@ -1,0 +1,179 @@
+/*==================================================
+GLOBAL TRANSITIONS
+==================================================*/
+
+a,
+button,
+input,
+textarea,
+.card,
+.project-card,
+.tech-card,
+.stat-card,
+.timeline-card,
+.info-card{
+    transition:all .35s ease;
+}
+
+/*==================================================
+FADE IN
+==================================================*/
+
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+}
+
+.fade-down{
+    opacity:0;
+    transform:translateY(-60px);
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-60px);
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(60px);
+}
+
+.show{
+    opacity:1;
+    transform:translate(0);
+}
+/*==================================================
+FLOATING AVATAR
+==================================================*/
+
+.hero-avatar{
+    animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+/*==================================================
+BUTTON EFFECT
+==================================================*/
+
+.primary-btn,
+.resume-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.primary-btn::before,
+.resume-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.4),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+.primary-btn:hover::before,
+.resume-btn:hover::before{
+
+    left:120%;
+
+}
+/*==================================================
+CARD HOVER
+==================================================*/
+
+.tech-card:hover,
+.project-card:hover,
+.stat-card:hover,
+.timeline-card:hover,
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.tech-card:hover{
+
+    rotate:-1deg;
+
+}
+/*==================================================
+NAVBAR SCROLL
+==================================================*/
+
+.header-scroll{
+
+    background:rgba(12,12,12,.85);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+}
+/*==================================================
+IMAGE EFFECT
+==================================================*/
+
+.project-card img,
+.hero-avatar{
+
+    transition:.6s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+/*==================================================
+SOCIAL
+==================================================*/
+
+.social-links a:hover{
+
+    transform:translateY(-8px) rotate(6deg);
+
+}
+/*==================================================
+SMOOTH SCROLL
+==================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}

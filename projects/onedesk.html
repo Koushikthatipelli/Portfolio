@@ -4,102 +4,78 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>OneDesk | Koushik Portfolio</title>
+    <title>OneDesk | Productivity Workspace</title>
 
     <meta name="description"
-          content="OneDesk - Premium Productivity Workspace designed and developed by Koushik.">
+        content="OneDesk - Smart Productivity Workspace developed by Koushik.">
 
-    <!-- FAVICON -->
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/icons/favicon.ico">
 
-    <link rel="icon"
-          href="../assets/icons/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- GOOGLE FONTS -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- LENIS -->
-
+    <!-- Lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <!-- GSAP -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
     <!-- CSS -->
-
-    <link rel="stylesheet"
-          href="../css/project.css">
-
-    <script src="../js/project.js"></script>
+    <link rel="stylesheet" href="../css/project.css">
 
 </head>
 
-<body>
+<body class="onedesk">
 
-<!--==========================================
+<!--==============================
 LOADER
-===========================================-->
+===============================-->
 
 <div class="loader">
 
-    <h1>
-
-        OneDesk
-
-    </h1>
+    <h1>OneDesk</h1>
 
 </div>
 
-<!--==========================================
-CURSOR
-===========================================-->
+<!--==============================
+CUSTOM CURSOR
+===============================-->
 
 <div class="cursor"></div>
 
 <div class="cursor-blur"></div>
 
-<!--==========================================
+<!--==============================
 SCROLL PROGRESS
-===========================================-->
+===============================-->
 
-<div class="progress-bar">
+<div class="progress-progress">
 
     <span></span>
 
 </div>
 
-<!--==========================================
+<!--==============================
 HEADER
-===========================================-->
+===============================-->
 
 <header id="header">
 
     <div class="container navbar">
 
-        <a href="../index.html"
-           class="logo">
+        <a href="../index.html" class="logo">
 
-            ONE<span>DESK</span>
+            One<span>Desk</span>
 
         </a>
 
@@ -107,54 +83,23 @@ HEADER
 
             <ul class="nav-links">
 
-                <li>
+                <li><a href="#overview">Overview</a></li>
 
-                    <a href="#overview">
+                <li><a href="#modules">Features</a></li>
 
-                        Overview
+                <li><a href="#gallery">Gallery</a></li>
 
-                    </a>
+                <li><a href="#tech">Tech Stack</a></li>
 
-                </li>
-
-                <li>
-
-                    <a href="#features">
-
-                        Features
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#gallery">
-
-                        Gallery
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#tech">
-
-                        Tech Stack
-
-                    </a>
-
-                </li>
+                <li><a href="#journey">Journey</a></li>
 
             </ul>
 
         </nav>
 
-        <a href="../index.html"
-           class="back-btn">
+        <a href="../index.html" class="back-btn">
 
-            ← Back
+            ← Portfolio
 
         </a>
 
@@ -162,64 +107,59 @@ HEADER
 
 </header>
 
-<!--==========================================
+<!--==============================
 HERO
-===========================================-->
+===============================-->
 
 <section class="hero">
+
+<div class="hero-gradient"></div>
 
 <div class="container hero-grid">
 
 <!-- LEFT -->
 
-<div class="hero-left">
+<div class="hero-content">
 
-<div class="project-tag">
+<div class="project-badge">
 
-PRODUCTIVITY PLATFORM
+<i class="fa-solid fa-briefcase"></i>
+
+Productivity Workspace
 
 </div>
 
 <h1>
 
-OneDesk
+Work.
+
+<br>
+
+Organized.
 
 </h1>
 
-<h2>
-
-Organize Better.
-
-<br>
-
-Work Faster.
-
-<br>
-
-Stay Focused.
-
-</h2>
-
 <p>
 
-A premium productivity platform that combines
-tasks, notes, projects and personal workspace
-management into one clean, modern and
-efficient dashboard.
+OneDesk is an all-in-one productivity platform that helps users
+manage projects, tasks, personal notes and daily workflows through
+a clean dashboard designed for maximum efficiency.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#gallery"
-class="primary-btn">
+<a href="#gallery" class="primary-btn">
 
-View Project
+<i class="fa-solid fa-images"></i>
+
+Explore Project
 
 </a>
 
-<a href="#"
-class="secondary-btn">
+<a href="#" class="secondary-btn">
+
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 Live Demo
 
@@ -227,183 +167,128 @@ Live Demo
 
 </div>
 
-<div class="hero-stats">
+<div class="hero-metrics">
 
 <div>
 
-<h3>
+<h2>5+</h2>
 
-5+
-
-</h3>
-
-<span>
-
-Core Modules
-
-</span>
+<span>Productivity Modules</span>
 
 </div>
 
 <div>
 
-<h3>
+<h2>4</h2>
 
-1000+
-
-</h3>
-
-<span>
-
-Tasks Managed
-
-</span>
+<span>Core Dashboards</span>
 
 </div>
 
 <div>
 
-<h3>
+<h2>100%</h2>
 
-24/7
-
-</h3>
-
-<span>
-
-Productivity
-
-</span>
+<span>Responsive</span>
 
 </div>
 
 </div>
 
 </div>
+
 <!-- RIGHT -->
 
-<div class="hero-right">
+<div class="hero-preview">
 
-    <!-- MACBOOK MOCKUP -->
+<div class="dashboard-frame">
 
-    <div class="mockup-wrapper">
+<img src="../assets/onedesk/hero.png"
+     alt="OneDesk Dashboard">
 
-        <div class="mockup-glow"></div>
+</div>
 
-        <img src="../assets/onedesk/hero.png"
-             alt="OneDesk Dashboard"
-             class="mockup-image">
+<!-- Floating Card -->
 
-    </div>
+<div class="floating-card doctor">
 
-    <!-- FLOATING CARD 1 -->
+<i class="fa-solid fa-list-check"></i>
 
-    <div class="floating-card card-one">
+<div>
 
-        <i class="fa-solid fa-list-check"></i>
+<h4>Task Manager</h4>
 
-        <div>
-
-            <span>
-
-                TODAY'S TASKS
-
-            </span>
-
-            <h4>
-
-                12 Tasks Remaining
-
-            </h4>
-
-        </div>
-
-    </div>
-
-    <!-- FLOATING CARD 2 -->
-
-    <div class="floating-card card-two">
-
-        <i class="fa-solid fa-note-sticky"></i>
-
-        <div>
-
-            <span>
-
-                QUICK NOTES
-
-            </span>
-
-            <h4>
-
-                Smart Workspace
-
-            </h4>
-
-        </div>
-
-    </div>
-
-    <!-- FLOATING CARD 3 -->
-
-    <div class="floating-card card-three">
-
-        <i class="fa-solid fa-chart-line"></i>
-
-        <div>
-
-            <span>
-
-                PRODUCTIVITY
-
-            </span>
-
-            <h4>
-
-                94% Completed
-
-            </h4>
-
-        </div>
-
-    </div>
+<span>Daily Productivity</span>
 
 </div>
 
 </div>
 
-<!-- SCROLL -->
+<!-- Floating Card -->
 
-<div class="scroll-indicator">
+<div class="floating-card pharmacy">
 
-    <span>
+<i class="fa-solid fa-folder-open"></i>
 
-        Scroll to Explore
+<div>
 
-    </span>
+<h4>Projects</h4>
 
-    <div class="scroll-line"></div>
+<span>Manage Everything</span>
+
+</div>
+
+</div>
+
+<!-- Floating Card -->
+
+<div class="floating-card patient">
+
+<i class="fa-solid fa-note-sticky"></i>
+
+<div>
+
+<h4>Smart Notes</h4>
+
+<span>Ideas & Documentation</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-down">
+
+<span>Scroll</span>
+
+<div class="scroll-line"></div>
 
 </div>
 
 </section>
 
 <!--==========================================
-OVERVIEW
+NEXT PART
+
+Project Overview
+Problem → Solution
+Project Highlights
+
+===========================================-->
+<!--==========================================
+PROJECT OVERVIEW
 ===========================================-->
 
-<section id="overview"
-         class="overview">
+<section id="overview" class="overview">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
-
-                PROJECT OVERVIEW
-
-            </span>
+            <span>PROJECT OVERVIEW</span>
 
             <h2>
 
@@ -411,17 +296,16 @@ OVERVIEW
 
                 <br>
 
-                Unlimited Productivity.
+                Total Productivity.
 
             </h2>
 
             <p>
 
-                OneDesk was designed to simplify
-                productivity by combining tasks,
-                notes, projects and personal
-                organization into one clean
-                and modern dashboard.
+                OneDesk brings together project management,
+                task tracking, note taking and personal
+                productivity into one modern workspace,
+                eliminating the need for multiple applications.
 
             </p>
 
@@ -431,24 +315,24 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    MY ROLE
+                    <i class="fa-solid fa-code"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    Full Stack Developer
+                    My Role
 
                 </h3>
 
                 <p>
 
-                    Designed the complete UI,
-                    developed frontend,
-                    backend APIs and
-                    MongoDB authentication.
+                    Designed and developed the complete
+                    full stack application including UI,
+                    backend APIs, authentication,
+                    MongoDB integration and deployment.
 
                 </p>
 
@@ -456,24 +340,23 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    DURATION
+                    <i class="fa-solid fa-calendar-days"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    4 Weeks
+                    Duration
 
                 </h3>
 
                 <p>
 
-                    Planned, designed,
-                    developed and deployed
-                    the complete productivity
-                    management platform.
+                    Built over six weeks following an
+                    agile development workflow with
+                    continuous improvements and testing.
 
                 </p>
 
@@ -481,24 +364,49 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    PLATFORM
+                    <i class="fa-solid fa-layer-group"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    Web Application
+                    Platform
 
                 </h3>
 
                 <p>
 
-                    Fully responsive
-                    productivity platform
-                    built for students,
-                    developers and teams.
+                    Responsive productivity platform
+                    featuring task management,
+                    projects, notes and
+                    personal dashboard.
+
+                </p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>
+
+                    Security
+
+                </h3>
+
+                <p>
+
+                    Secure JWT authentication,
+                    encrypted passwords,
+                    protected REST APIs
+                    and MongoDB cloud database.
 
                 </p>
 
@@ -509,97 +417,296 @@ OVERVIEW
     </div>
 
 </section>
+
 <!--==========================================
-FEATURES
+PROBLEM & SOLUTION
 ===========================================-->
 
-<section id="features"
-         class="features">
+<section class="problem-solution">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="problem-grid">
 
-            <span>
+            <!-- Problem -->
 
-                CORE FEATURES
+            <div class="problem-card">
 
-            </span>
+                <span>
+
+                    THE PROBLEM
+
+                </span>
+
+                <h2>
+
+                    Productivity Tools
+                    Are Too Fragmented.
+
+                </h2>
+
+                <p>
+
+                    Users often rely on multiple applications
+                    to manage projects, daily tasks,
+                    notes and personal workflows.
+                    Switching between platforms
+                    reduces efficiency and organization.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Multiple disconnected applications
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Difficult project organization
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Scattered personal notes
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Inefficient daily workflow
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Solution -->
+
+            <div class="solution-card">
+
+                <span>
+
+                    THE SOLUTION
+
+                </span>
+
+                <h2>
+
+                    OneDesk Unifies
+                    Your Entire Workspace.
+
+                </h2>
+
+                <p>
+
+                    A centralized productivity platform
+                    where projects, tasks,
+                    notes and personal workflows
+                    are managed from one clean,
+                    modern dashboard.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Smart Project Management
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Daily Task Tracking
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Integrated Notes Workspace
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Secure User Dashboard
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+PROJECT HIGHLIGHTS
+===========================================-->
+
+<section class="highlights">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHY ONEDESK</span>
 
             <h2>
 
-                Everything Needed
+                Everything You Need.
 
                 <br>
 
-                For Maximum Productivity.
+                One Workspace.
+
+            </h2>
+
+        </div>
+
+        <div class="highlight-grid">
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    5+
+
+                </h1>
+
+                <span>
+
+                    Productivity Modules
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    4
+
+                </h1>
+
+                <span>
+
+                    Core Dashboards
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    100%
+
+                </h1>
+
+                <span>
+
+                    Responsive Design
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    MERN
+
+                </h1>
+
+                <span>
+
+                    Full Stack Platform
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+NEXT PART
+
+Core Features
+Gallery
+
+===========================================-->
+<!--==========================================
+CORE MODULES
+===========================================-->
+
+<section id="modules" class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>CORE FEATURES</span>
+
+            <h2>
+
+                Everything Required For
+                Maximum Productivity.
 
             </h2>
 
             <p>
 
-                OneDesk brings tasks, notes,
-                projects and productivity
-                management together in one
-                modern and intuitive workspace.
+                OneDesk combines project management,
+                task planning, note taking and workflow
+                organization into one seamless platform.
 
             </p>
 
         </div>
 
-        <div class="features-grid">
+        <div class="bento-grid">
 
-            <!-- CARD -->
+            <!-- Large Card -->
 
-            <div class="feature-card">
+            <div class="feature-card large">
 
-                <i class="fa-solid fa-list-check"></i>
+                <div class="feature-icon">
 
-                <h3>
+                    <i class="fa-solid fa-folder-tree"></i>
 
-                    Smart Tasks
-
-                </h3>
-
-                <p>
-
-                    Organize daily tasks,
-                    set priorities and
-                    monitor progress with
-                    an intuitive interface.
-
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-note-sticky"></i>
-
-                <h3>
-
-                    Notes Workspace
-
-                </h3>
-
-                <p>
-
-                    Store important ideas,
-                    meeting notes and
-                    quick reminders in
-                    one secure place.
-
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-diagram-project"></i>
+                </div>
 
                 <h3>
 
@@ -609,66 +716,134 @@ FEATURES
 
                 <p>
 
-                    Manage multiple
-                    projects, milestones
-                    and deadlines from
-                    a single dashboard.
+                    Create, organize and monitor multiple
+                    projects with dedicated workspaces,
+                    progress tracking and intuitive
+                    project organization.
 
                 </p>
 
             </div>
 
-            <!-- CARD -->
+            <!-- Small -->
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-chart-column"></i>
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
 
                 <h3>
 
-                    Analytics
+                    Task Manager
 
                 </h3>
 
                 <p>
 
-                    Visual productivity
-                    reports help monitor
-                    completed work and
-                    overall performance.
+                    Create daily tasks,
+                    set priorities,
+                    organize schedules
+                    and monitor completion.
 
                 </p>
 
             </div>
 
-            <!-- CARD -->
+            <!-- Small -->
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-clock"></i>
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-note-sticky"></i>
+
+                </div>
 
                 <h3>
 
-                    Time Tracking
+                    Smart Notes
 
                 </h3>
 
                 <p>
 
-                    Track daily work,
-                    maintain schedules
-                    and improve personal
-                    productivity.
+                    Store ideas,
+                    documentation,
+                    meeting notes
+                    and important information
+                    in one secure workspace.
 
                 </p>
 
             </div>
 
-            <!-- CARD -->
+            <!-- Large -->
+
+            <div class="feature-card large">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>
+
+                    Productivity Dashboard
+
+                </h3>
+
+                <p>
+
+                    Monitor project progress,
+                    completed tasks,
+                    pending work and
+                    productivity insights
+                    from one modern dashboard.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-user-shield"></i>
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h3>
+
+                    User Workspace
+
+                </h3>
+
+                <p>
+
+                    Personalized dashboard
+                    with secure login,
+                    profile management
+                    and workspace customization.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
 
                 <h3>
 
@@ -678,10 +853,10 @@ FEATURES
 
                 <p>
 
-                    JWT authentication
-                    with MongoDB ensures
-                    secure access and
-                    protected user data.
+                    JWT authentication,
+                    encrypted passwords
+                    and protected APIs
+                    for secure access.
 
                 </p>
 
@@ -694,141 +869,168 @@ FEATURES
 </section>
 
 <!--==========================================
-PROJECT GALLERY
+PRODUCT SHOWCASE
 ===========================================-->
 
-<section id="gallery"
-         class="gallery">
+<section id="gallery" class="gallery">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
-
-                PRODUCT SHOWCASE
-
-            </span>
+            <span>PRODUCT SHOWCASE</span>
 
             <h2>
 
-                Experience
-
-                <br>
-
-                The Interface.
+                Explore
+                OneDesk.
 
             </h2>
 
+            <p>
+
+                A modern productivity workspace
+                designed to simplify projects,
+                tasks and daily workflows.
+
+            </p>
+
         </div>
 
-        <div class="gallery-wrapper">
+        <!-- Dashboard -->
 
-            <!-- SCREEN -->
+        <div class="gallery-item">
 
-            <div class="gallery-item">
+            <div class="gallery-image">
 
                 <img src="../assets/onedesk/dashboard.png"
                      alt="Dashboard">
 
-                <div class="gallery-info">
+            </div>
 
-                    <h3>
+            <div class="gallery-content">
 
-                        Dashboard
+                <span>01</span>
 
-                    </h3>
+                <h3>
 
-                    <p>
+                    Productivity Dashboard
 
-                        Productivity dashboard
-                        with quick access to
-                        every workspace module.
+                </h3>
 
-                    </p>
+                <p>
 
-                </div>
+                    View projects,
+                    pending tasks,
+                    completed work
+                    and productivity insights
+                    from one centralized dashboard.
+
+                </p>
 
             </div>
 
-            <!-- SCREEN -->
+        </div>
 
-            <div class="gallery-item">
+        <!-- Projects -->
 
-                <img src="../assets/onedesk/tasks.png"
-                     alt="Tasks">
+        <div class="gallery-item reverse">
 
-                <div class="gallery-info">
-
-                    <h3>
-
-                        Tasks
-
-                    </h3>
-
-                    <p>
-
-                        Manage daily work,
-                        organize priorities
-                        and monitor progress.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- SCREEN -->
-
-            <div class="gallery-item">
+            <div class="gallery-image">
 
                 <img src="../assets/onedesk/projects.png"
                      alt="Projects">
 
-                <div class="gallery-info">
+            </div>
 
-                    <h3>
+            <div class="gallery-content">
 
-                        Projects
+                <span>02</span>
 
-                    </h3>
+                <h3>
 
-                    <p>
+                    Project Workspace
 
-                        Manage multiple
-                        projects from one
-                        beautiful dashboard.
+                </h3>
 
-                    </p>
+                <p>
 
-                </div>
+                    Organize multiple projects,
+                    manage deadlines,
+                    monitor progress
+                    and keep everything
+                    in one place.
+
+                </p>
 
             </div>
 
-            <!-- SCREEN -->
+        </div>
 
-            <div class="gallery-item">
+        <!-- Tasks -->
+
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <img src="../assets/onedesk/tasks.png"
+                     alt="Tasks">
+
+            </div>
+
+            <div class="gallery-content">
+
+                <span>03</span>
+
+                <h3>
+
+                    Smart Task Manager
+
+                </h3>
+
+                <p>
+
+                    Plan your daily work,
+                    prioritize important tasks,
+                    track completion
+                    and boost productivity.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Notes -->
+
+        <div class="gallery-item reverse">
+
+            <div class="gallery-image">
 
                 <img src="../assets/onedesk/notes.png"
                      alt="Notes">
 
-                <div class="gallery-info">
+            </div>
 
-                    <h3>
+            <div class="gallery-content">
 
-                        Notes
+                <span>04</span>
 
-                    </h3>
+                <h3>
 
-                    <p>
+                    Notes Workspace
 
-                        Save ideas,
-                        documentation and
-                        important references.
+                </h3>
 
-                    </p>
+                <p>
 
-                </div>
+                    Capture ideas,
+                    meeting summaries,
+                    documentation
+                    and personal notes
+                    with an organized interface.
+
+                </p>
 
             </div>
 
@@ -837,39 +1039,37 @@ PROJECT GALLERY
     </div>
 
 </section>
+
+<!--==========================================
+NEXT PART
+
+Tech Stack
+Development Journey
+Challenges
+Metrics
+CTA
+Footer
+
+===========================================-->
 <!--==========================================
 TECH STACK
 ===========================================-->
 
-<section id="tech"
-         class="tech-stack">
+<section id="tech" class="tech-stack">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>TECH STACK</span>
 
-                TECHNOLOGIES
-
-            </span>
-
-            <h2>
-
-                Built Using
-
-                <br>
-
-                Modern Technologies.
-
-            </h2>
+            <h2>Built With Modern Technologies</h2>
 
             <p>
 
-                OneDesk is built using a modern
-                full stack architecture focused on
-                performance, scalability and a
-                seamless productivity experience.
+                OneDesk is developed using the MERN Stack,
+                providing a scalable, secure and responsive
+                productivity platform.
 
             </p>
 
@@ -877,67 +1077,83 @@ TECH STACK
 
         <div class="tech-grid">
 
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-brands fa-html5"></i>
 
-                <h3>HTML5</h3>
+                <h3>Frontend</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+
+                    <li>CSS3</li>
+
+                    <li>JavaScript ES6</li>
+
+                    <li>Responsive UI</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
-
-                <i class="fa-brands fa-css3-alt"></i>
-
-                <h3>CSS3</h3>
-
-            </div>
-
-            <div class="tech-item">
-
-                <i class="fa-brands fa-js"></i>
-
-                <h3>JavaScript</h3>
-
-            </div>
-
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-brands fa-node-js"></i>
 
-                <h3>Node.js</h3>
+                <h3>Backend</h3>
+
+                <ul>
+
+                    <li>Node.js</li>
+
+                    <li>Express.js</li>
+
+                    <li>REST APIs</li>
+
+                    <li>JWT Authentication</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
-
-                <i class="fa-solid fa-server"></i>
-
-                <h3>Express.js</h3>
-
-            </div>
-
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-solid fa-database"></i>
 
-                <h3>MongoDB</h3>
+                <h3>Database</h3>
+
+                <ul>
+
+                    <li>MongoDB Atlas</li>
+
+                    <li>Mongoose</li>
+
+                    <li>User Data</li>
+
+                    <li>Cloud Storage</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-solid fa-cloud"></i>
 
-                <h3>Render</h3>
+                <h3>Deployment</h3>
 
-            </div>
+                <ul>
 
-            <div class="tech-item">
+                    <li>Render</li>
 
-                <i class="fa-solid fa-globe"></i>
+                    <li>Vercel</li>
 
-                <h3>Vercel</h3>
+                    <li>GitHub</li>
+
+                    <li>Cloud Hosting</li>
+
+                </ul>
 
             </div>
 
@@ -951,27 +1167,15 @@ TECH STACK
 DEVELOPMENT JOURNEY
 ===========================================-->
 
-<section class="timeline">
+<section id="journey" class="timeline">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>DEVELOPMENT JOURNEY</span>
 
-                DEVELOPMENT JOURNEY
-
-            </span>
-
-            <h2>
-
-                From Idea
-
-                <br>
-
-                To Deployment.
-
-            </h2>
+            <h2>From Concept To Productivity Platform</h2>
 
         </div>
 
@@ -979,101 +1183,109 @@ DEVELOPMENT JOURNEY
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    01
+                <div class="timeline-content">
+
+                    <h3>Research</h3>
+
+                    <p>
+
+                        Studied modern productivity tools,
+                        task management systems
+                        and project collaboration platforms
+                        to understand user needs.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    Research
-
-                </h3>
-
-                <p>
-
-                    Analyzed modern productivity
-                    tools and identified common
-                    workflow problems faced by
-                    students and professionals.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    02
+                <div class="timeline-content">
+
+                    <h3>UI / UX Design</h3>
+
+                    <p>
+
+                        Designed a clean,
+                        distraction-free workspace
+                        inspired by premium productivity
+                        and SaaS applications.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    UI Design
-
-                </h3>
-
-                <p>
-
-                    Designed a premium,
-                    distraction-free interface
-                    inspired by modern SaaS
-                    productivity platforms.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    03
+                <div class="timeline-content">
+
+                    <h3>Development</h3>
+
+                    <p>
+
+                        Built authentication,
+                        task manager,
+                        notes module,
+                        project management
+                        and responsive dashboards.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    Development
-
-                </h3>
-
-                <p>
-
-                    Developed frontend,
-                    backend APIs,
-                    authentication and
-                    MongoDB integration.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    04
+                <div class="timeline-content">
+
+                    <h3>Testing</h3>
+
+                    <p>
+
+                        Improved performance,
+                        responsiveness,
+                        animations,
+                        authentication
+                        and user experience.
+
+                    </p>
 
                 </div>
 
-                <h3>
+            </div>
 
-                    Deployment
+            <div class="timeline-item">
 
-                </h3>
+                <div class="timeline-dot"></div>
 
-                <p>
+                <div class="timeline-content">
 
-                    Successfully deployed
-                    using Render and
-                    optimized for a fully
-                    responsive experience.
+                    <h3>Deployment</h3>
 
-                </p>
+                    <p>
+
+                        Successfully deployed
+                        using GitHub,
+                        Render
+                        and Vercel
+                        with cloud-based hosting.
+
+                    </p>
+
+                </div>
 
             </div>
 
@@ -1083,85 +1295,6 @@ DEVELOPMENT JOURNEY
 
 </section>
 
-<!--==========================================
-PROJECT STATS
-===========================================-->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat-box">
-
-                <h2>
-
-                    1000+
-
-                </h2>
-
-                <p>
-
-                    Tasks Managed
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    5+
-
-                </h2>
-
-                <p>
-
-                    Core Modules
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    50+
-
-                </h2>
-
-                <p>
-
-                    Notes Created
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    100%
-
-                </h2>
-
-                <p>
-
-                    Responsive Design
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 <!--==========================================
 CHALLENGES
 ===========================================-->
@@ -1170,34 +1303,11 @@ CHALLENGES
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>CHALLENGES</span>
 
-                DEVELOPMENT CHALLENGES
-
-            </span>
-
-            <h2>
-
-                Problems Solved
-
-                <br>
-
-                During Development.
-
-            </h2>
-
-            <p>
-
-                Building OneDesk involved solving
-                real-world productivity challenges
-                including secure authentication,
-                scalable database architecture and
-                creating a fast, responsive user
-                experience.
-
-            </p>
+            <h2>Problems Solved During Development</h2>
 
         </div>
 
@@ -1205,20 +1315,13 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-user-lock"></i>
-
-                <h3>
-
-                    Authentication
-
-                </h3>
+                <h3>Project Organization</h3>
 
                 <p>
 
-                    Implemented secure user
-                    registration, JWT authentication
-                    and encrypted password
-                    management using MongoDB.
+                    Designed an intuitive workspace
+                    capable of managing multiple
+                    projects without clutter.
 
                 </p>
 
@@ -1226,20 +1329,13 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-list-check"></i>
-
-                <h3>
-
-                    Task Management
-
-                </h3>
+                <h3>Authentication</h3>
 
                 <p>
 
-                    Built a scalable task
-                    management system with
-                    priorities, completion
-                    tracking and filtering.
+                    Implemented secure JWT login,
+                    encrypted passwords
+                    and protected backend APIs.
 
                 </p>
 
@@ -1247,20 +1343,14 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-database"></i>
-
-                <h3>
-
-                    Database Design
-
-                </h3>
+                <h3>Task Management</h3>
 
                 <p>
 
-                    Structured MongoDB
-                    collections for users,
-                    projects, notes and
-                    tasks to ensure scalability.
+                    Created a flexible task system
+                    supporting priorities,
+                    completion tracking
+                    and productivity workflows.
 
                 </p>
 
@@ -1268,20 +1358,15 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                <h3>
-
-                    Deployment
-
-                </h3>
+                <h3>Responsive Interface</h3>
 
                 <p>
 
-                    Successfully deployed
-                    the frontend on Vercel,
-                    backend on Render and
-                    connected MongoDB Atlas.
+                    Optimized every page
+                    for desktop,
+                    tablet
+                    and mobile devices
+                    while maintaining a premium UI.
 
                 </p>
 
@@ -1294,67 +1379,96 @@ CHALLENGES
 </section>
 
 <!--==========================================
-CALL TO ACTION
+PROJECT METRICS
+===========================================-->
+
+<section class="metrics">
+
+    <div class="container">
+
+        <div class="metric-grid">
+
+            <div class="metric-card">
+
+                <h2 data-count="5">0</h2>
+
+                <span>Productivity Modules</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="4">0</h2>
+
+                <span>Core Dashboards</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="100">0</h2>
+
+                <span>Responsive Design</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="24">0</h2>
+
+                <span>Cloud Access</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+CTA
 ===========================================-->
 
 <section class="cta">
 
     <div class="container">
 
-        <div class="cta-content">
+        <div class="cta-box">
 
-            <span>
-
-                MODERN PRODUCTIVITY PLATFORM
-
-            </span>
+            <span>THANK YOU FOR VISITING</span>
 
             <h2>
 
-                Explore
-
-                <br>
-
-                OneDesk.
+                Ready To Organize
+                Your Work Smarter?
 
             </h2>
 
             <p>
 
-                Experience a clean,
-                fast and modern workspace
-                built to simplify productivity,
-                project management and
-                daily organization.
+                OneDesk simplifies project management,
+                task organization and note taking,
+                helping users stay productive
+                with one powerful workspace.
 
             </p>
 
             <div class="cta-buttons">
 
-                <a href="#"
-                   class="primary-btn">
+                <a href="https://one-desk-omega.vercel.app/" class="primary-btn">
 
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-solid fa-globe"></i>
 
                     Live Demo
 
                 </a>
 
-                <a href="https://github.com/Koushikthatipelli/OneDesk"
-                   class="secondary-btn">
+                <a href="https://github.com/Koushikthatipelli/OneDesk" class="secondary-btn">
 
                     <i class="fa-brands fa-github"></i>
 
                     GitHub
-
-                </a>
-
-                <a href="../index.html"
-                   class="secondary-btn">
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-                    Back To Portfolio
 
                 </a>
 
@@ -1370,39 +1484,29 @@ CALL TO ACTION
 FOOTER
 ===========================================-->
 
-<footer>
+<footer class="project-footer">
 
     <div class="container">
 
-        <div class="footer-content">
+        <h2>OneDesk</h2>
 
-            <h2>
+        <p>
 
-                OneDesk
+            Designed & Developed by
 
-            </h2>
+            <strong>Koushik</strong>
 
-            <p>
+        </p>
 
-                Designed & Developed by
+        <a href="../index.html">
 
-                <strong>
+            ← Back to Portfolio
 
-                    Koushik
-
-                </strong>
-
-            </p>
-
-        </div>
+        </a>
 
     </div>
 
 </footer>
-
-<!--==========================================
-SCRIPT
-===========================================-->
 
 <script src="../js/project.js"></script>
 

@@ -4,98 +4,78 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Roadmap.io | Koushik Portfolio</title>
+    <title>Roadmap.io | Become a Full Stack Developer</title>
 
     <meta name="description"
-          content="Roadmap.io - Premium Full Stack Learning Platform designed and developed by Koushik.">
+        content="Roadmap.io - Interactive Full Stack Developer Learning Platform by Koushik.">
 
-    <!-- FAVICON -->
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/icons/favicon.ico">
 
-    <link rel="icon"
-          href="../assets/icons/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- GOOGLE FONTS -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- LENIS -->
-
+    <!-- Lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <!-- GSAP -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
     <!-- CSS -->
-<link rel="stylesheet" href="../css/project.css">
-<script src="../js/project.js"></script>
+    <link rel="stylesheet" href="../css/project.css">
+
 </head>
 
-<body>
+<body class="roadmap">
 
-<!--==========================================
+<!--==============================
 LOADER
-===========================================-->
+===============================-->
 
 <div class="loader">
 
-    <h1>
-
-        Roadmap.io
-
-    </h1>
+    <h1>Roadmap.io</h1>
 
 </div>
 
-<!--==========================================
-CURSOR
-===========================================-->
+<!--==============================
+CUSTOM CURSOR
+===============================-->
 
 <div class="cursor"></div>
 
 <div class="cursor-blur"></div>
 
-<!--==========================================
+<!--==============================
 SCROLL PROGRESS
-===========================================-->
+===============================-->
 
-<div class="progress-bar">
+<div class="progress-progress">
 
     <span></span>
 
 </div>
 
-<!--==========================================
+<!--==============================
 HEADER
-===========================================-->
+===============================-->
 
 <header id="header">
 
     <div class="container navbar">
 
-        <a href="../assets/icons/favicon.ico"
-           class="logo">
+        <a href="../index.html" class="logo">
 
-            ROADMAP<span>.</span>
+            Roadmap<span>.io</span>
 
         </a>
 
@@ -103,54 +83,23 @@ HEADER
 
             <ul class="nav-links">
 
-                <li>
+                <li><a href="#overview">Overview</a></li>
 
-                    <a href="#overview">
+                <li><a href="#modules">Features</a></li>
 
-                        Overview
+                <li><a href="#gallery">Gallery</a></li>
 
-                    </a>
+                <li><a href="#tech">Tech Stack</a></li>
 
-                </li>
-
-                <li>
-
-                    <a href="#features">
-
-                        Features
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#gallery">
-
-                        Gallery
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#tech">
-
-                        Tech Stack
-
-                    </a>
-
-                </li>
+                <li><a href="#journey">Journey</a></li>
 
             </ul>
 
         </nav>
 
-        <a href="../index.html"
-           class="back-btn">
+        <a href="../index.html" class="back-btn">
 
-            ← Back
+            ← Portfolio
 
         </a>
 
@@ -158,64 +107,60 @@ HEADER
 
 </header>
 
-<!--==========================================
+<!--==============================
 HERO
-===========================================-->
+===============================-->
 
 <section class="hero">
+
+<div class="hero-gradient"></div>
 
 <div class="container hero-grid">
 
 <!-- LEFT -->
 
-<div class="hero-left">
+<div class="hero-content">
 
-<div class="project-tag">
+<div class="project-badge">
 
-PRODUCT CASE STUDY
+<i class="fa-solid fa-road"></i>
+
+Learning Platform
 
 </div>
 
 <h1>
 
-Roadmap.io
+Master.
+
+<br>
+
+Full Stack.
 
 </h1>
 
-<h2>
-
-Learn Smarter.
-
-<br>
-
-Build Faster.
-
-<br>
-
-Become Industry Ready.
-
-</h2>
-
 <p>
 
-A premium developer learning platform that combines
-structured roadmaps, project tracking, notes,
-tasks and progress analytics into one modern
-experience.
+Roadmap.io is an interactive learning platform that helps aspiring
+developers master Full Stack Development through structured learning
+paths, real-world projects, progress tracking, notes management and
+career-focused roadmaps.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#gallery"
-class="primary-btn">
+<a href="#gallery" class="primary-btn">
 
-View Project
+<i class="fa-solid fa-images"></i>
+
+Explore Project
 
 </a>
 
-<a href="#"
-class="secondary-btn">
+<a href="#" class="secondary-btn">
+
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
 Live Demo
 
@@ -223,183 +168,128 @@ Live Demo
 
 </div>
 
-<div class="hero-stats">
+<div class="hero-metrics">
 
 <div>
 
-<h3>
+<h2>12+</h2>
 
-40+
-
-</h3>
-
-<span>
-
-Roadmaps
-
-</span>
+<span>Learning Tracks</span>
 
 </div>
 
 <div>
 
-<h3>
+<h2>25+</h2>
 
-500+
-
-</h3>
-
-<span>
-
-Tasks
-
-</span>
+<span>Projects</span>
 
 </div>
 
 <div>
 
-<h3>
+<h2>100%</h2>
 
-25+
-
-</h3>
-
-<span>
-
-Projects
-
-</span>
+<span>Responsive</span>
 
 </div>
 
 </div>
 
 </div>
+
 <!-- RIGHT -->
 
-<div class="hero-right">
+<div class="hero-preview">
 
-    <!-- MACBOOK MOCKUP -->
+<div class="dashboard-frame">
 
-    <div class="mockup-wrapper">
+<img src="../assets/roadmap/hero.png"
+     alt="Roadmap Dashboard">
 
-        <div class="mockup-glow"></div>
+</div>
 
-        <img src="../assets/roadmap/hero.png"
-             alt="Roadmap.io Dashboard"
-             class="mockup-image">
+<!-- Floating Card -->
 
-    </div>
+<div class="floating-card doctor">
 
-    <!-- FLOATING CARD 1 -->
+<i class="fa-brands fa-html5"></i>
 
-    <div class="floating-card card-one">
+<div>
 
-        <i class="fa-solid fa-code"></i>
+<h4>Frontend</h4>
 
-        <div>
-
-            <span>
-
-                CURRENT MODULE
-
-            </span>
-
-            <h4>
-
-                Full Stack Developer
-
-            </h4>
-
-        </div>
-
-    </div>
-
-    <!-- FLOATING CARD 2 -->
-
-    <div class="floating-card card-two">
-
-        <i class="fa-solid fa-chart-line"></i>
-
-        <div>
-
-            <span>
-
-                PROGRESS
-
-            </span>
-
-            <h4>
-
-                87% Completed
-
-            </h4>
-
-        </div>
-
-    </div>
-
-    <!-- FLOATING CARD 3 -->
-
-    <div class="floating-card card-three">
-
-        <i class="fa-solid fa-check"></i>
-
-        <div>
-
-            <span>
-
-                TASKS
-
-            </span>
-
-            <h4>
-
-                527 Finished
-
-            </h4>
-
-        </div>
-
-    </div>
+<span>HTML • CSS • JavaScript</span>
 
 </div>
 
 </div>
 
-<!-- SCROLL -->
+<!-- Floating Card -->
 
-<div class="scroll-indicator">
+<div class="floating-card pharmacy">
 
-    <span>
+<i class="fa-solid fa-server"></i>
 
-        Scroll to Explore
+<div>
 
-    </span>
+<h4>Backend</h4>
 
-    <div class="scroll-line"></div>
+<span>Node.js • Express</span>
+
+</div>
+
+</div>
+
+<!-- Floating Card -->
+
+<div class="floating-card patient">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<div>
+
+<h4>Career Roadmap</h4>
+
+<span>Projects & Interviews</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-down">
+
+<span>Scroll</span>
+
+<div class="scroll-line"></div>
 
 </div>
 
 </section>
 
 <!--==========================================
-OVERVIEW
+NEXT PART
+
+Project Overview
+Problem → Solution
+Project Highlights
+
+===========================================-->
+<!--==========================================
+PROJECT OVERVIEW
 ===========================================-->
 
-<section id="overview"
-         class="overview">
+<section id="overview" class="overview">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
-
-                PROJECT OVERVIEW
-
-            </span>
+            <span>PROJECT OVERVIEW</span>
 
             <h2>
 
@@ -407,17 +297,16 @@ OVERVIEW
 
                 <br>
 
-                Every Developer's Journey.
+                Complete Developer Journey.
 
             </h2>
 
             <p>
 
-                Roadmap.io was designed to simplify the learning
-                journey of aspiring developers by bringing
-                roadmaps, tasks, notes, projects and progress
-                tracking together in one clean and modern
-                platform.
+                Roadmap.io provides a structured learning experience for
+                aspiring developers by combining technology roadmaps,
+                project-based learning, notes, progress tracking and
+                career preparation into one modern platform.
 
             </p>
 
@@ -427,23 +316,23 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    MY ROLE
+                    <i class="fa-solid fa-code"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    Full Stack Developer
+                    My Role
 
                 </h3>
 
                 <p>
 
-                    Designed the UI, developed the frontend,
-                    built the backend APIs and integrated
-                    MongoDB authentication.
+                    Designed and developed the complete platform including
+                    UI/UX, frontend architecture, backend APIs, database
+                    integration and deployment.
 
                 </p>
 
@@ -451,23 +340,23 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    DURATION
+                    <i class="fa-solid fa-calendar-days"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    4 Weeks
+                    Duration
 
                 </h3>
 
                 <p>
 
-                    Planned, designed, developed,
-                    tested and deployed as a complete
-                    portfolio product.
+                    Planned, designed and developed over six weeks
+                    following an agile workflow with continuous
+                    improvements and testing.
 
                 </p>
 
@@ -475,23 +364,48 @@ OVERVIEW
 
             <div class="overview-card">
 
-                <span>
+                <div class="card-icon">
 
-                    PLATFORM
+                    <i class="fa-solid fa-layer-group"></i>
 
-                </span>
+                </div>
 
                 <h3>
 
-                    Web Application
+                    Platform
 
                 </h3>
 
                 <p>
 
-                    Fully responsive developer learning
-                    platform with authentication and
-                    dashboard features.
+                    Responsive learning platform featuring roadmaps,
+                    notes, task management, project tracking and
+                    developer resources.
+
+                </p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>
+
+                    Security
+
+                </h3>
+
+                <p>
+
+                    Secure JWT authentication,
+                    encrypted passwords,
+                    protected REST APIs
+                    and MongoDB cloud database.
 
                 </p>
 
@@ -502,50 +416,530 @@ OVERVIEW
     </div>
 
 </section>
+
 <!--==========================================
-FEATURES
+PROBLEM & SOLUTION
 ===========================================-->
 
-<section id="features"
-         class="features">
+<section class="problem-solution">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="problem-grid">
 
-            <span>
+            <!-- Problem -->
 
-                CORE FEATURES
+            <div class="problem-card">
 
-            </span>
+                <span>
+
+                    THE PROBLEM
+
+                </span>
+
+                <h2>
+
+                    Learning Full Stack
+                    Is Often Confusing.
+
+                </h2>
+
+                <p>
+
+                    Most students rely on scattered YouTube videos,
+                    blogs and online courses without a proper learning
+                    sequence. This leads to confusion, missed concepts
+                    and inconsistent progress.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        No structured learning path
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Too many disconnected resources
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Difficult progress tracking
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                        Lack of project guidance
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Solution -->
+
+            <div class="solution-card">
+
+                <span>
+
+                    THE SOLUTION
+
+                </span>
+
+                <h2>
+
+                    Roadmap.io Guides
+                    Every Learning Step.
+
+                </h2>
+
+                <p>
+
+                    A complete developer platform where users follow
+                    structured roadmaps, build practical projects,
+                    manage notes and track their progress from beginner
+                    to professional Full Stack Developer.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Interactive Technology Roadmaps
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Integrated Notes Workspace
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Daily Task & Progress Tracking
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Real-World Project Learning
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+PROJECT HIGHLIGHTS
+===========================================-->
+
+<section class="highlights">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHY ROADMAP.IO</span>
 
             <h2>
 
-                Everything Needed
+                Learn Smarter.
 
                 <br>
 
-                To Become A Developer.
+                Build Faster.
+
+            </h2>
+
+        </div>
+
+        <div class="highlight-grid">
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    12+
+
+                </h1>
+
+                <span>
+
+                    Learning Roadmaps
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    25+
+
+                </h1>
+
+                <span>
+
+                    Practical Projects
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    100%
+
+                </h1>
+
+                <span>
+
+                    Responsive Platform
+
+                </span>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h1>
+
+                    MERN
+
+                </h1>
+
+                <span>
+
+                    Full Stack Powered
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+NEXT PART
+
+Core Features
+Gallery
+
+===========================================-->
+<!--==========================================
+CORE MODULES
+===========================================-->
+
+<section id="modules" class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>CORE FEATURES</span>
+
+            <h2>
+
+                Everything Required To
+                Become A Full Stack Developer.
 
             </h2>
 
             <p>
 
-                Roadmap.io combines learning, planning,
-                project building and progress tracking
-                into one modern productivity platform.
+                Roadmap.io combines structured learning,
+                practical projects and productivity tools
+                into one complete developer platform.
 
             </p>
 
         </div>
 
-        <div class="features-grid">
+        <div class="bento-grid">
 
-            <!-- CARD -->
+            <!-- Large Card -->
+
+            <div class="feature-card large">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-route"></i>
+
+                </div>
+
+                <h3>
+
+                    Interactive Learning Roadmaps
+
+                </h3>
+
+                <p>
+
+                    Follow structured learning paths covering
+                    HTML, CSS, JavaScript, React,
+                    Node.js, Express, MongoDB,
+                    Git, DevOps and System Design
+                    in the correct order.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-route"></i>
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
+
+                <h3>
+
+                    Task Manager
+
+                </h3>
+
+                <p>
+
+                    Organize daily learning goals,
+                    coding practice and project milestones
+                    with an integrated task manager.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <h3>
+
+                    Smart Notes
+
+                </h3>
+
+                <p>
+
+                    Save documentation,
+                    interview questions,
+                    important concepts
+                    and personal revision notes.
+
+                </p>
+
+            </div>
+
+            <!-- Large -->
+
+            <div class="feature-card large">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                </div>
+
+                <h3>
+
+                    Project Based Learning
+
+                </h3>
+
+                <p>
+
+                    Build real-world applications after
+                    every roadmap stage to strengthen
+                    practical development skills and
+                    create a professional portfolio.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>
+
+                    Progress Tracking
+
+                </h3>
+
+                <p>
+
+                    Visual dashboards help monitor
+                    completed topics,
+                    projects and
+                    overall learning progress.
+
+                </p>
+
+            </div>
+
+            <!-- Small -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                </div>
+
+                <h3>
+
+                    Career Preparation
+
+                </h3>
+
+                <p>
+
+                    Prepare for internships,
+                    coding interviews,
+                    resumes and placement opportunities.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+PRODUCT SHOWCASE
+===========================================-->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>PLATFORM SHOWCASE</span>
+
+            <h2>
+
+                Explore
+                Roadmap.io
+
+            </h2>
+
+            <p>
+
+                A modern learning experience designed
+                for students, developers and aspiring
+                software engineers.
+
+            </p>
+
+        </div>
+
+        <!-- Dashboard -->
+
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <img src="../assets/roadmap/dashboard.png"
+                     alt="Dashboard">
+
+            </div>
+
+            <div class="gallery-content">
+
+                <span>01</span>
+
+                <h3>
+
+                    Learning Dashboard
+
+                </h3>
+
+                <p>
+
+                    View your completed topics,
+                    active roadmaps,
+                    upcoming tasks and
+                    learning statistics
+                    from one centralized dashboard.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Roadmaps -->
+
+        <div class="gallery-item reverse">
+
+            <div class="gallery-image">
+
+                <img src="../assets/roadmap/interactive.png"
+                     alt="Roadmaps">
+
+            </div>
+
+            <div class="gallery-content">
+
+                <span>02</span>
 
                 <h3>
 
@@ -555,119 +949,82 @@ FEATURES
 
                 <p>
 
-                    Step-by-step learning paths covering
-                    frontend, backend and full stack
-                    development.
+                    Learn technologies step by step
+                    with visual learning paths
+                    covering Frontend,
+                    Backend,
+                    Databases,
+                    Cloud and DevOps.
 
                 </p>
 
             </div>
 
-            <!-- CARD -->
+        </div>
 
-            <div class="feature-card">
+        <!-- Notes -->
 
-                <i class="fa-solid fa-list-check"></i>
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <img src="../assets/roadmap/notes.png"
+                     alt="Notes">
+
+            </div>
+
+            <div class="gallery-content">
+
+                <span>03</span>
 
                 <h3>
 
-                    Smart Task Manager
+                    Personal Notes Workspace
 
                 </h3>
 
                 <p>
 
-                    Organize daily learning tasks,
-                    monitor completion and maintain
-                    productivity.
+                    Organize interview notes,
+                    documentation,
+                    code snippets
+                    and important concepts
+                    for quick revision.
 
                 </p>
 
             </div>
 
-            <!-- CARD -->
+        </div>
 
-            <div class="feature-card">
+        <!-- Tasks -->
 
-                <i class="fa-solid fa-book-open"></i>
+        <div class="gallery-item reverse">
 
-                <h3>
+            <div class="gallery-image">
 
-                    Personal Notes
-
-                </h3>
-
-                <p>
-
-                    Save important concepts,
-                    interview questions and
-                    revision material.
-
-                </p>
+                <img src="../assets/roadmap/tasks.png"
+                     alt="Tasks">
 
             </div>
 
-            <!-- CARD -->
+            <div class="gallery-content">
 
-            <div class="feature-card">
-
-                <i class="fa-solid fa-diagram-project"></i>
+                <span>04</span>
 
                 <h3>
 
-                    Project Library
+                    Task & Progress Manager
 
                 </h3>
 
                 <p>
 
-                    Showcase completed projects,
-                    deployment links and GitHub
-                    repositories.
-
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-chart-column"></i>
-
-                <h3>
-
-                    Progress Analytics
-
-                </h3>
-
-                <p>
-
-                    Track completed lessons,
-                    projects and overall learning
-                    performance.
-
-                </p>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-user-shield"></i>
-
-                <h3>
-
-                    Secure Authentication
-
-                </h3>
-
-                <p>
-
-                    JWT based login system
-                    with MongoDB database
-                    integration.
+                    Stay productive with
+                    daily coding goals,
+                    project milestones
+                    and visual progress tracking
+                    throughout your learning journey.
 
                 </p>
 
@@ -680,245 +1037,117 @@ FEATURES
 </section>
 
 <!--==========================================
-PROJECT GALLERY
+NEXT PART
+
+Tech Stack
+Development Journey
+Challenges
+Metrics
+CTA
+Footer
+
 ===========================================-->
-
-<section id="gallery"
-         class="gallery">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span>
-
-                PRODUCT SHOWCASE
-
-            </span>
-
-            <h2>
-
-                Experience
-
-                <br>
-
-                The Interface.
-
-            </h2>
-
-        </div>
-
-        <div class="gallery-wrapper">
-
-            <!-- SCREEN -->
-
-            <div class="gallery-item">
-
-                <img src="../assets/roadmap/dashboard.png"
-                     alt="Dashboard">
-
-                <div class="gallery-info">
-
-                    <h3>
-
-                        Dashboard
-
-                    </h3>
-
-                    <p>
-
-                        Personalized learning dashboard
-                        with progress overview.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- SCREEN -->
-
-            <div class="gallery-item">
-
-               <img src="../assets/roadmap/tasks.png"
-                     alt="Tasks">
-
-                <div class="gallery-info">
-
-                    <h3>
-
-                        Tasks
-
-                    </h3>
-
-                    <p>
-
-                        Daily productivity system
-                        with task management.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- SCREEN -->
-
-            <div class="gallery-item">
-
-                <img src="../assets/roadmap/projects.png"
-                     alt="Projects">
-
-                <div class="gallery-info">
-
-                    <h3>
-
-                        Projects
-
-                    </h3>
-
-                    <p>
-
-                        Complete portfolio showcase
-                        with live deployments.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- SCREEN -->
-
-            <div class="gallery-item">
-
-               <img src="../assets/roadmap/notes.png"
-                     alt="Notes">
-
-                <div class="gallery-info">
-
-                    <h3>
-
-                        Notes
-
-                    </h3>
-
-                    <p>
-
-                        Store revision notes,
-                        code snippets and references.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 <!--==========================================
 TECH STACK
 ===========================================-->
 
-<section id="tech"
-         class="tech-stack">
+<section id="tech" class="tech-stack">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>TECH STACK</span>
 
-                TECHNOLOGIES
-
-            </span>
-
-            <h2>
-
-                Built Using
-
-                <br>
-
-                Modern Technologies.
-
-            </h2>
+            <h2>Built Using Modern Web Technologies</h2>
 
             <p>
-
-                Roadmap.io is developed using a modern
-                full stack architecture focused on
-                performance, scalability and simplicity.
-
+                Roadmap.io is developed using the MERN stack with modern
+                frontend technologies, secure backend architecture and
+                scalable cloud deployment.
             </p>
 
         </div>
 
         <div class="tech-grid">
 
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-brands fa-html5"></i>
 
-                <h3>HTML5</h3>
+                <h3>Frontend</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+
+                    <li>CSS3</li>
+
+                    <li>JavaScript ES6</li>
+
+                    <li>Responsive Design</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
-
-                <i class="fa-brands fa-css3-alt"></i>
-
-                <h3>CSS3</h3>
-
-            </div>
-
-            <div class="tech-item">
-
-                <i class="fa-brands fa-js"></i>
-
-                <h3>JavaScript</h3>
-
-            </div>
-
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-brands fa-node-js"></i>
 
-                <h3>Node.js</h3>
+                <h3>Backend</h3>
+
+                <ul>
+
+                    <li>Node.js</li>
+
+                    <li>Express.js</li>
+
+                    <li>REST API</li>
+
+                    <li>JWT Authentication</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
-
-                <i class="fa-solid fa-server"></i>
-
-                <h3>Express.js</h3>
-
-            </div>
-
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-solid fa-database"></i>
 
-                <h3>MongoDB</h3>
+                <h3>Database</h3>
+
+                <ul>
+
+                    <li>MongoDB Atlas</li>
+
+                    <li>Mongoose</li>
+
+                    <li>User Progress</li>
+
+                    <li>Cloud Storage</li>
+
+                </ul>
 
             </div>
 
-            <div class="tech-item">
+            <div class="tech-card">
 
                 <i class="fa-solid fa-cloud"></i>
 
-                <h3>Render</h3>
+                <h3>Deployment</h3>
 
-            </div>
+                <ul>
 
-            <div class="tech-item">
+                    <li>Render</li>
 
-                <i class="fa-solid fa-globe"></i>
+                    <li>Vercel</li>
 
-                <h3>Vercel</h3>
+                    <li>GitHub</li>
+
+                    <li>Cloud Hosting</li>
+
+                </ul>
 
             </div>
 
@@ -932,27 +1161,15 @@ TECH STACK
 DEVELOPMENT JOURNEY
 ===========================================-->
 
-<section class="timeline">
+<section id="journey" class="timeline">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>DEVELOPMENT JOURNEY</span>
 
-                DEVELOPMENT JOURNEY
-
-            </span>
-
-            <h2>
-
-                From Idea
-
-                <br>
-
-                To Deployment.
-
-            </h2>
+            <h2>From Learning Idea To Developer Platform</h2>
 
         </div>
 
@@ -960,96 +1177,107 @@ DEVELOPMENT JOURNEY
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    01
+                <div class="timeline-content">
+
+                    <h3>Research</h3>
+
+                    <p>
+
+                        Studied existing developer learning platforms,
+                        documentation websites and roadmap-based
+                        educational resources.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    Research
-
-                </h3>
-
-                <p>
-
-                    Studied existing roadmap platforms
-                    and identified missing productivity
-                    features.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    02
+                <div class="timeline-content">
+
+                    <h3>UI / UX Design</h3>
+
+                    <p>
+
+                        Designed a premium learning interface
+                        inspired by modern SaaS platforms with
+                        clean navigation and intuitive layouts.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    UI Design
-
-                </h3>
-
-                <p>
-
-                    Designed a clean dashboard inspired
-                    by modern SaaS applications.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    03
+                <div class="timeline-content">
+
+                    <h3>Development</h3>
+
+                    <p>
+
+                        Built responsive frontend,
+                        backend APIs,
+                        authentication,
+                        notes management
+                        and roadmap modules.
+
+                    </p>
 
                 </div>
-
-                <h3>
-
-                    Development
-
-                </h3>
-
-                <p>
-
-                    Built frontend, backend APIs,
-                    authentication and MongoDB
-                    integration.
-
-                </p>
 
             </div>
 
             <div class="timeline-item">
 
-                <div class="timeline-number">
+                <div class="timeline-dot"></div>
 
-                    04
+                <div class="timeline-content">
+
+                    <h3>Testing</h3>
+
+                    <p>
+
+                        Optimized responsiveness,
+                        animations,
+                        authentication,
+                        usability
+                        and application performance.
+
+                    </p>
 
                 </div>
 
-                <h3>
+            </div>
 
-                    Deployment
+            <div class="timeline-item">
 
-                </h3>
+                <div class="timeline-dot"></div>
 
-                <p>
+                <div class="timeline-content">
 
-                    Successfully deployed using
-                    Render and Vercel with a
-                    responsive user experience.
+                    <h3>Deployment</h3>
 
-                </p>
+                    <p>
+
+                        Successfully deployed using
+                        GitHub,
+                        Render
+                        and Vercel
+                        for cloud hosting.
+
+                    </p>
+
+                </div>
 
             </div>
 
@@ -1059,85 +1287,6 @@ DEVELOPMENT JOURNEY
 
 </section>
 
-<!--==========================================
-PROJECT STATS
-===========================================-->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat-box">
-
-                <h2>
-
-                    500+
-
-                </h2>
-
-                <p>
-
-                    Tasks Managed
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    40+
-
-                </h2>
-
-                <p>
-
-                    Learning Roadmaps
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    25+
-
-                </h2>
-
-                <p>
-
-                    Projects Tracked
-
-                </p>
-
-            </div>
-
-            <div class="stat-box">
-
-                <h2>
-
-                    100%
-
-                </h2>
-
-                <p>
-
-                    Responsive Design
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 <!--==========================================
 CHALLENGES
 ===========================================-->
@@ -1146,32 +1295,11 @@ CHALLENGES
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <span>
+            <span>CHALLENGES</span>
 
-                DEVELOPMENT CHALLENGES
-
-            </span>
-
-            <h2>
-
-                Problems Solved
-
-                <br>
-
-                During Development.
-
-            </h2>
-
-            <p>
-
-                Every project presents unique technical
-                challenges. Roadmap.io helped improve
-                problem-solving, debugging and deployment
-                skills through real-world development.
-
-            </p>
+            <h2>Problems Solved During Development</h2>
 
         </div>
 
@@ -1179,19 +1307,13 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-user-lock"></i>
-
-                <h3>
-
-                    Authentication
-
-                </h3>
+                <h3>Learning Structure</h3>
 
                 <p>
 
-                    Built secure user registration,
-                    login authentication using JWT
-                    and encrypted passwords.
+                    Created a logical roadmap that helps
+                    developers learn technologies in the
+                    correct sequence.
 
                 </p>
 
@@ -1199,19 +1321,14 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-database"></i>
-
-                <h3>
-
-                    Database Integration
-
-                </h3>
+                <h3>User Authentication</h3>
 
                 <p>
 
-                    Connected MongoDB Atlas and
-                    designed scalable collections
-                    for users, tasks and notes.
+                    Implemented secure login,
+                    JWT authentication
+                    and protected APIs
+                    for every user.
 
                 </p>
 
@@ -1219,19 +1336,13 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                <h3>
-
-                    Deployment
-
-                </h3>
+                <h3>Progress Tracking</h3>
 
                 <p>
 
-                    Successfully deployed frontend
-                    and backend using Render and
-                    Vercel.
+                    Designed an efficient system
+                    to track completed topics,
+                    projects and daily goals.
 
                 </p>
 
@@ -1239,19 +1350,14 @@ CHALLENGES
 
             <div class="challenge-card">
 
-                <i class="fa-solid fa-mobile-screen"></i>
-
-                <h3>
-
-                    Responsive UI
-
-                </h3>
+                <h3>Responsive Experience</h3>
 
                 <p>
 
-                    Optimized layouts for desktop,
-                    tablet and mobile devices with
-                    modern responsive techniques.
+                    Optimized layouts
+                    for desktop,
+                    tablet
+                    and mobile devices.
 
                 </p>
 
@@ -1264,68 +1370,96 @@ CHALLENGES
 </section>
 
 <!--==========================================
-FINAL CTA
+PROJECT METRICS
+===========================================-->
+
+<section class="metrics">
+
+    <div class="container">
+
+        <div class="metric-grid">
+
+            <div class="metric-card">
+
+                <h2 data-count="12">0</h2>
+
+                <span>Learning Tracks</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="25">0</h2>
+
+                <span>Projects</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="100">0</h2>
+
+                <span>Responsive Design</span>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h2 data-count="500">0</h2>
+
+                <span>Learning Resources</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+CTA
 ===========================================-->
 
 <section class="cta">
 
     <div class="container">
 
-        <div class="cta-content">
+        <div class="cta-box">
 
-            <span>
-
-                READY TO EXPLORE?
-
-            </span>
+            <span>THANK YOU FOR VISITING</span>
 
             <h2>
 
-                Experience
-
-                <br>
-
-                Roadmap.io
+                Ready To Start
+                Your Developer Journey?
 
             </h2>
 
             <p>
 
-                Discover a modern learning platform
-                designed to help aspiring developers
-                organize, learn and build projects
-                efficiently.
+                Roadmap.io provides structured learning,
+                practical projects and career guidance
+                to help aspiring developers become
+                professional Full Stack Engineers.
 
             </p>
 
             <div class="cta-buttons">
 
-                <a href="https://red1-for-hek.vercel.app/"
-                   target="_blank"
-                   class="primary-btn">
+                <a href="https://roadmap-io.onrender.com/" class="primary-btn">
 
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-solid fa-globe"></i>
 
                     Live Demo
 
                 </a>
 
-                <a href="https://github.com/Koushikthatipelli/Roadmap.io"
-                   target="_blank"
-                   class="secondary-btn">
+                <a href="https://github.com/Koushikthatipelli/Roadmap.io" class="secondary-btn">
 
                     <i class="fa-brands fa-github"></i>
 
                     GitHub
-
-                </a>
-
-                <a href="../../index.html"
-                   class="secondary-btn">
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-                    Back To Portfolio
 
                 </a>
 
@@ -1341,36 +1475,31 @@ FINAL CTA
 FOOTER
 ===========================================-->
 
-<footer>
+<footer class="project-footer">
 
     <div class="container">
 
-        <div class="footer-content">
+        <h2>Roadmap.io</h2>
 
-            <h2>
+        <p>
 
-                Roadmap.io
+            Designed & Developed by
 
-            </h2>
+            <strong>Koushik</strong>
 
-            <p>
+        </p>
 
-                Designed & Developed by
-                <strong>Koushik</strong>
+        <a href="../index.html">
 
-            </p>
+            ← Back to Portfolio
 
-        </div>
+        </a>
 
     </div>
 
 </footer>
 
-<!--==========================================
-SCRIPT
-===========================================-->
-
-<script src="script.js"></script>
+<script src="../js/project.js"></script>
 
 </body>
 

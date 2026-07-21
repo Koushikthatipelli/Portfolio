@@ -1,892 +1,706 @@
-/*==================================================
-            ROADMAP.IO
-            SCRIPT.JS
-==================================================*/
+/*=========================================
+PROJECT JS
+CuraOne | Roadmap | OneDesk
+=========================================*/
 
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
 
-/*==================================================
-            LOADER
-==================================================*/
-
-window.addEventListener("load",()=>{
-
-    const tl=gsap.timeline();
-
-    tl.to(".loader h1",{
-
-        opacity:0,
-
-        y:-80,
-
-        duration:.8,
-
-        ease:"power3.out"
-
-    })
-
-    .to(".loader",{
-
-        y:"-100%",
-
-        duration:1,
-
-        ease:"power4.inOut"
-
-    })
-
-    .from("#header",{
-
-        y:-80,
-
-        opacity:0,
-
-        duration:.8
-
-    },"-=.5")
-
-    .from(".hero-left > *",{
-
-        y:60,
-
-        opacity:0,
-
-        stagger:.12,
-
-        duration:.8,
-
-        ease:"power3.out"
-
-    },"-=.5")
-
-    .from(".mockup-wrapper",{
-
-        scale:.9,
-
-        opacity:0,
-
-        duration:1
-
-    },"-=.7")
-
-    .from(".floating-card",{
-
-        x:60,
-
-        opacity:0,
-
-        stagger:.15,
-
-        duration:.8
-
-    },"-=.8");
+    initLoader();
+    initCursor();
+    initScrollProgress();
+    initSmoothScroll();
+    initActiveNavigation();
 
 });
 
-/*==================================================
-            LENIS
-==================================================*/
+/*=========================================
+LOADER
+=========================================*/
 
-const lenis=new Lenis({
+function initLoader() {
 
-    duration:1.2,
+    const loader = document.querySelector(".loader");
 
-    smoothWheel:true,
+    if (!loader) return;
 
-    wheelMultiplier:1,
+    window.addEventListener("load", () => {
 
-    touchMultiplier:2,
+        setTimeout(() => {
 
-    infinite:false
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
 
-});
+        }, 900);
 
-function raf(time){
-
-    lenis.raf(time);
-
-    requestAnimationFrame(raf);
+    });
 
 }
 
-requestAnimationFrame(raf);
+/*=========================================
+CUSTOM CURSOR
+=========================================*/
 
-lenis.on("scroll",ScrollTrigger.update);
+function initCursor() {
 
-gsap.ticker.add((time)=>{
+    const cursor = document.querySelector(".cursor");
+    const blur = document.querySelector(".cursor-blur");
 
-    lenis.raf(time*1000);
+    if (!cursor || !blur) return;
 
-});
+    document.addEventListener("mousemove", (e) => {
 
-gsap.ticker.lagSmoothing(0);
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
 
-/*==================================================
-            PROGRESS BAR
-==================================================*/
+        blur.style.left = e.clientX + "px";
+        blur.style.top = e.clientY + "px";
 
-const progress = document.querySelector(".progress-bar span");
+    });
 
-if (progress) {
-    lenis.on("scroll", ({ scroll }) => {
-        const pageHeight =
+    document
+        .querySelectorAll("a,button,.feature-card,.overview-card,.gallery-image,.tech-card,.challenge-card")
+        .forEach(item => {
+
+            item.addEventListener("mouseenter", () => {
+
+                cursor.style.transform = "translate(-50%,-50%) scale(1.8)";
+
+            });
+
+            item.addEventListener("mouseleave", () => {
+
+                cursor.style.transform = "translate(-50%,-50%) scale(1)";
+
+            });
+
+        });
+
+}
+
+/*=========================================
+SCROLL PROGRESS
+=========================================*/
+
+function initScrollProgress() {
+
+    const progress = document.querySelector(".progress-progress span");
+
+    if (!progress) return;
+
+    window.addEventListener("scroll", () => {
+
+        const scrollTop = window.pageYOffset;
+
+        const height =
             document.documentElement.scrollHeight -
             window.innerHeight;
 
-        progress.style.width =
-            (scroll / pageHeight) * 100 + "%";
+        const percent = (scrollTop / height) * 100;
+
+        progress.style.width = percent + "%";
+
     });
+
 }
 
-/*==================================================
-            CUSTOM CURSOR
-==================================================*/
+/*=========================================
+LENIS SMOOTH SCROLL
+=========================================*/
 
-const cursor=document.querySelector(".cursor");
+// function initSmoothScroll() {
 
-const blur=document.querySelector(".cursor-blur");
+//     if (typeof Lenis === "undefined") return;
 
-let mouseX=0;
+//     const lenis = new Lenis({
 
-let mouseY=0;
+//         duration: 1.2,
+//         smoothWheel: true,
+//         wheelMultiplier: 1
 
-window.addEventListener("mousemove",(e)=>{
+//     });
 
-    mouseX=e.clientX;
+//     function raf(time) {
 
-    mouseY=e.clientY;
+//         lenis.raf(time);
 
-});
+//         requestAnimationFrame(raf);
 
-gsap.ticker.add(()=>{
+//     }
 
-    gsap.set(cursor,{
+//     requestAnimationFrame(raf);
 
-        x:mouseX,
+// }
 
-        y:mouseY
+/*=========================================
+ACTIVE NAVIGATION
+=========================================*/
 
-    });
+function initActiveNavigation() {
 
-    gsap.to(blur,{
+    const links = document.querySelectorAll(".nav-links a");
 
-        x:mouseX,
+    const sections = document.querySelectorAll("section[id]");
 
-        y:mouseY,
+    if (!links.length) return;
 
-        duration:.45,
+    window.addEventListener("scroll", () => {
 
-        ease:"power3.out"
+        let current = "";
 
-    });
+        sections.forEach(section => {
 
-});
+            const top = section.offsetTop - 140;
 
-/*==================================================
-            CURSOR HOVER
-==================================================*/
+            const height = section.offsetHeight;
 
-document.querySelectorAll(
+            if (window.scrollY >= top &&
+                window.scrollY < top + height) {
 
-"a,button,.feature-card,.overview-card,.gallery-item,.tech-item,.timeline-item,.challenge-card,.stat-box"
+                current = section.id;
 
-).forEach(item=>{
+            }
 
-    item.addEventListener("mouseenter",()=>{
+        });
 
-        gsap.to(cursor,{
+        links.forEach(link => {
 
-            width:56,
+            link.classList.remove("active");
 
-            height:56,
+            if (link.getAttribute("href") === "#" + current) {
 
-            border:"2px solid #fff",
+                link.classList.add("active");
 
-            background:"transparent",
-
-            duration:.25
+            }
 
         });
 
     });
 
-    item.addEventListener("mouseleave",()=>{
+}
+/*=========================================
+PART 2
+GSAP ANIMATIONS
+=========================================*/
 
-        gsap.to(cursor,{
+document.addEventListener("DOMContentLoaded", () => {
 
-            width:18,
-
-            height:18,
-
-            border:"0px solid transparent",
-
-            background:"#fff",
-
-            duration:.25
-
-        });
-
-    });
-
-});
-/*==================================================
-            HERO PARALLAX
-==================================================*/
-
-gsap.to(".hero-left",{
-
-    y:-120,
-
-    ease:"none",
-
-    scrollTrigger:{
-
-        trigger:".hero",
-
-        start:"top top",
-
-        end:"bottom top",
-
-        scrub:true
-
-    }
+    initHeader();
+    initCounters();
+    initScrollReveal();
+    initAnchorLinks();
+    initGalleryHover();
 
 });
 
-gsap.to(".hero-right",{
+/*=========================================
+HEADER EFFECT
+=========================================*/
 
-    y:-70,
+function initHeader() {
 
-    ease:"none",
+    const header = document.getElementById("header");
 
-    scrollTrigger:{
+    if (!header) return;
 
-        trigger:".hero",
+    window.addEventListener("scroll", () => {
 
-        start:"top top",
+        if (window.scrollY > 80) {
 
-        end:"bottom top",
+            header.style.background = "rgba(8,8,8,.88)";
+            header.style.backdropFilter = "blur(24px)";
+            header.style.boxShadow = "0 15px 40px rgba(0,0,0,.35)";
 
-        scrub:true
+        } else {
 
-    }
-
-});
-
-gsap.to(".mockup-wrapper",{
-
-    y:-50,
-
-    scale:.92,
-
-    ease:"none",
-
-    scrollTrigger:{
-
-        trigger:".hero",
-
-        start:"top top",
-
-        end:"bottom top",
-
-        scrub:true
-
-    }
-
-});
-
-/*==================================================
-FLOATING CARDS
-==================================================*/
-
-gsap.to(".card-one",{
-
-    y:-18,
-
-    repeat:-1,
-
-    yoyo:true,
-
-    duration:3,
-
-    ease:"sine.inOut"
-
-});
-
-gsap.to(".card-two",{
-
-    y:-15,
-
-    repeat:-1,
-
-    yoyo:true,
-
-    duration:2.6,
-
-    delay:.3,
-
-    ease:"sine.inOut"
-
-});
-
-gsap.to(".card-three",{
-
-    y:-20,
-
-    repeat:-1,
-
-    yoyo:true,
-
-    duration:3.2,
-
-    delay:.5,
-
-    ease:"sine.inOut"
-
-});
-
-/*==================================================
-SECTION REVEALS
-==================================================*/
-
-gsap.utils.toArray(".section-header").forEach(section=>{
-
-    gsap.from(section,{
-
-        y:80,
-
-        opacity:0,
-
-        duration:1,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-
-            trigger:section,
-
-            start:"top 82%"
+            header.style.background = "rgba(8,8,8,.45)";
+            header.style.boxShadow = "none";
 
         }
 
     });
 
+}
+
+/*=========================================
+COUNTER ANIMATION
+=========================================*/
+
+function initCounters() {
+
+    const counters = document.querySelectorAll("[data-count]");
+
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target = Number(counter.dataset.count);
+
+            let current = 0;
+
+            const speed = target / 80;
+
+            const update = () => {
+
+                current += speed;
+
+                if (current < target) {
+
+                    counter.textContent = Math.floor(current);
+
+                    requestAnimationFrame(update);
+
+                } else {
+
+                    counter.textContent = target;
+
+                }
+
+            };
+
+            update();
+
+            observer.unobserve(counter);
+
+        });
+
+    }, {
+
+        threshold: .5
+
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+}
+
+/*=========================================
+GSAP SCROLL REVEAL
+=========================================*/
+
+function initScrollReveal() {
+
+    if (typeof gsap === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(
+
+        ".section-title,.overview-card,.feature-card,.gallery-item,.tech-card,.timeline-item,.challenge-card,.metric-card,.cta-box"
+
+    ).forEach(element => {
+
+        gsap.from(element, {
+
+            y: 80,
+
+            opacity: 0,
+
+            duration: 1,
+
+            ease: "power3.out",
+
+            scrollTrigger: {
+
+                trigger: element,
+
+                start: "top 85%",
+
+                toggleActions: "play none none reverse"
+
+            }
+
+        });
+
+    });
+
+}
+
+/*=========================================
+SMOOTH NAVIGATION
+=========================================*/
+
+// function initAnchorLinks() {
+
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+//         anchor.addEventListener("click", function (e) {
+
+//             const target = document.querySelector(
+
+//                 this.getAttribute("href")
+
+//             );
+
+//             if (!target) return;
+
+//             e.preventDefault();
+
+
+//         });
+
+//     });
+
+// }
+
+/*=========================================
+GALLERY PARALLAX HOVER
+=========================================*/
+
+function initGalleryHover() {
+
+    document.querySelectorAll(".gallery-image").forEach(card => {
+
+        card.addEventListener("mousemove", e => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+
+            const y = e.clientY - rect.top;
+
+            const rotateY = (x / rect.width - .5) * 12;
+
+            const rotateX = (.5 - y / rect.height) * 12;
+
+            card.style.transform = `
+                perspective(1200px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+                scale(1.02)
+            `;
+
+        });
+
+        card.addEventListener("mouseleave", () => {
+
+            card.style.transform =
+                "perspective(1200px) rotateX(0) rotateY(0) scale(1)";
+
+        });
+
+    });
+
+}
+/*=========================================
+PART 3
+PREMIUM INTERACTIONS
+=========================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initHeroAnimation();
+    initFloatingCards();
+    initMagneticButtons();
+    initScrollIndicator();
+    disableCursorOnMobile();
+
 });
 
-/*==================================================
-OVERVIEW CARDS
-==================================================*/
+/*=========================================
+HERO ANIMATION
+=========================================*/
 
-gsap.from(".overview-card",{
+function initHeroAnimation() {
 
-    y:70,
+    if (typeof gsap === "undefined") return;
 
-    opacity:0,
+    const tl = gsap.timeline();
 
-    stagger:.15,
+    tl.from(".project-badge", {
 
-    duration:.8,
+        y:40,
+        opacity:0,
+        duration:.8
 
-    ease:"power3.out",
+    })
 
-    scrollTrigger:{
+    .from(".hero-content h1",{
 
-        trigger:".overview-grid",
+        y:60,
+        opacity:0,
+        duration:1
 
-        start:"top 82%"
+    },"-=.4")
 
-    }
+    .from(".hero-content p",{
 
-});
+        y:40,
+        opacity:0,
+        duration:.8
 
-/*==================================================
-FEATURE CARDS
-==================================================*/
+    },"-=.6")
 
-gsap.from(".feature-card",{
+    .from(".hero-buttons",{
 
-    y:90,
+        y:40,
+        opacity:0,
+        duration:.8
 
-    opacity:0,
+    },"-=.5")
 
-    stagger:.12,
+    .from(".hero-metrics",{
 
-    duration:.8,
+        y:40,
+        opacity:0,
+        duration:.8
 
-    ease:"power3.out",
+    },"-=.5")
 
-    scrollTrigger:{
+    .from(".hero-preview",{
 
-        trigger:".features-grid",
+        x:80,
+        opacity:0,
+        duration:1.2
 
-        start:"top 82%"
+    },"-=1");
 
-    }
+}
 
-});
+/*=========================================
+FLOATING CARDS
+=========================================*/
 
-/*==================================================
-GALLERY
-==================================================*/
+function initFloatingCards(){
 
-gsap.from(".gallery-item",{
+    if(typeof gsap==="undefined") return;
 
-    y:100,
+    gsap.to(".doctor",{
 
-    opacity:0,
+        y:-15,
 
-    stagger:.2,
+        repeat:-1,
 
-    duration:.9,
-
-    ease:"power3.out",
-
-    scrollTrigger:{
-
-        trigger:".gallery-wrapper",
-
-        start:"top 82%"
-
-    }
-
-});
-/*==================================================
-            TECH STACK
-==================================================*/
-
-gsap.from(".tech-item",{
-
-    y:80,
-
-    opacity:0,
-
-    stagger:.12,
-
-    duration:.8,
-
-    ease:"power3.out",
-
-    scrollTrigger:{
-
-        trigger:".tech-grid",
-
-        start:"top 82%"
-
-    }
-
-});
-
-/*==================================================
-            TIMELINE
-==================================================*/
-
-gsap.from(".timeline-item",{
-
-    y:90,
-
-    opacity:0,
-
-    stagger:.18,
-
-    duration:.9,
-
-    ease:"power3.out",
-
-    scrollTrigger:{
-
-        trigger:".timeline-wrapper",
-
-        start:"top 80%"
-
-    }
-
-});
-
-/*==================================================
-            STATS COUNTER
-==================================================*/
-
-document.querySelectorAll(".stat-box h2").forEach(counter=>{
-
-    const text=counter.innerText;
-
-    const number=parseInt(text);
-
-    if(isNaN(number)) return;
-
-    gsap.fromTo(counter,{
-
-        value:0
-
-    },{
-
-        value:number,
+        yoyo:true,
 
         duration:2,
 
-        snap:{value:1},
-
-        ease:"power2.out",
-
-        scrollTrigger:{
-
-            trigger:counter,
-
-            start:"top 85%"
-
-        },
-
-        onUpdate:function(){
-
-            if(text.includes("%")){
-
-                counter.innerHTML=
-
-                Math.floor(this.targets()[0].value)+"%";
-
-            }
-
-            else if(text.includes("+")){
-
-                counter.innerHTML=
-
-                Math.floor(this.targets()[0].value)+"+";
-
-            }
-
-            else{
-
-                counter.innerHTML=
-
-                Math.floor(this.targets()[0].value);
-
-            }
-
-        }
+        ease:"power1.inOut"
 
     });
 
-});
+    gsap.to(".patient",{
 
-/*==================================================
-            CHALLENGE CARDS
-==================================================*/
+        y:-20,
 
-gsap.from(".challenge-card",{
+        repeat:-1,
 
-    y:90,
+        yoyo:true,
 
-    opacity:0,
+        duration:2.8,
 
-    stagger:.15,
+        ease:"power1.inOut"
 
-    duration:.8,
+    });
 
-    ease:"power3.out",
+    gsap.to(".pharmacy",{
 
-    scrollTrigger:{
+        y:-18,
 
-        trigger:".challenge-grid",
+        repeat:-1,
 
-        start:"top 82%"
+        yoyo:true,
 
-    }
+        duration:2.3,
 
-});
+        ease:"power1.inOut"
 
-/*==================================================
-            CTA
-==================================================*/
+    });
 
-gsap.from(".cta-content",{
+}
 
-    scale:.95,
+/*=========================================
+MAGNETIC BUTTONS
+=========================================*/
 
-    opacity:0,
+function initMagneticButtons(){
 
-    duration:1,
+    document.querySelectorAll(".primary-btn,.secondary-btn")
+    .forEach(button=>{
 
-    ease:"power3.out",
+        button.addEventListener("mousemove",e=>{
 
-    scrollTrigger:{
+            const rect=button.getBoundingClientRect();
 
-        trigger:".cta",
+            const x=e.clientX-rect.left-rect.width/2;
 
-        start:"top 82%"
+            const y=e.clientY-rect.top-rect.height/2;
 
-    }
+            button.style.transform=
+            `translate(${x*0.18}px,${y*0.18}px)`;
 
-});
-/*==================================================
-            MAGNETIC BUTTONS
-==================================================*/
+        });
 
-document.querySelectorAll(
+        button.addEventListener("mouseleave",()=>{
 
-".primary-btn,.secondary-btn,.back-btn"
-
-).forEach(button=>{
-
-    button.addEventListener("mousemove",(e)=>{
-
-        const rect=button.getBoundingClientRect();
-
-        const x=e.clientX-rect.left-rect.width/2;
-
-        const y=e.clientY-rect.top-rect.height/2;
-
-        gsap.to(button,{
-
-            x:x*.25,
-
-            y:y*.25,
-
-            duration:.35,
-
-            ease:"power2.out"
+            button.style.transform="translate(0,0)";
 
         });
 
     });
 
-    button.addEventListener("mouseleave",()=>{
+}
 
-        gsap.to(button,{
+/*=========================================
+SCROLL INDICATOR
+=========================================*/
 
-            x:0,
+function initScrollIndicator(){
 
-            y:0,
+    const indicator=document.querySelector(".scroll-line");
 
-            duration:.6,
+    if(!indicator) return;
 
-            ease:"elastic.out(1,.45)"
+    if(typeof gsap==="undefined") return;
 
-        });
+    gsap.to(indicator,{
+
+        height:90,
+
+        repeat:-1,
+
+        yoyo:true,
+
+        duration:1.3,
+
+        ease:"power1.inOut"
 
     });
 
-});
+}
 
-/*==================================================
-            3D CARD TILT
-==================================================*/
+/*=========================================
+IMAGE PARALLAX
+=========================================*/
 
-document.querySelectorAll(
+// window.addEventListener("scroll",()=>{
 
-".feature-card,.overview-card,.gallery-item,.tech-item,.timeline-item,.challenge-card,.stat-box"
+//     const image=document.querySelector(".dashboard-frame");
 
-).forEach(card=>{
+//     if(!image) return;
 
-    card.addEventListener("mousemove",(e)=>{
+//     const offset=window.pageYOffset;
+
+//     image.style.transform=
+//     `translateY(${offset*0.08}px)`;
+
+// });
+
+/*=========================================
+SECTION GLOW
+=========================================*/
+
+document.querySelectorAll(".feature-card,.tech-card,.challenge-card")
+.forEach(card=>{
+
+    card.addEventListener("mousemove",e=>{
 
         const rect=card.getBoundingClientRect();
 
-        const x=e.clientX-rect.left;
+        const x=((e.clientX-rect.left)/rect.width)*100;
 
-        const y=e.clientY-rect.top;
+        const y=((e.clientY-rect.top)/rect.height)*100;
 
-        const rotateY=((x/rect.width)-.5)*10;
-
-        const rotateX=((y/rect.height)-.5)*-10;
-
-        gsap.to(card,{
-
-            rotationY:rotateY,
-
-            rotationX:rotateX,
-
-            transformPerspective:1200,
-
-            transformOrigin:"center",
-
-            duration:.35,
-
-            ease:"power2.out"
-
-        });
+        card.style.background=
+        `radial-gradient(circle at ${x}% ${y}%,
+        rgba(255,255,255,.08),
+        #111 55%)`;
 
     });
 
     card.addEventListener("mouseleave",()=>{
 
-        gsap.to(card,{
-
-            rotationX:0,
-
-            rotationY:0,
-
-            duration:.7,
-
-            ease:"power3.out"
-
-        });
+        card.style.background="#111";
 
     });
 
 });
 
-/*==================================================
-            IMAGE PARALLAX
-==================================================*/
+/*=========================================
+BACK TO TOP
+=========================================*/
 
-gsap.utils.toArray(".gallery-item img").forEach(image=>{
+const topButton=document.createElement("button");
 
-    gsap.to(image,{
+topButton.innerHTML='<i class="fa-solid fa-arrow-up"></i>';
 
-        y:-40,
+topButton.className="back-to-top";
 
-        ease:"none",
+document.body.appendChild(topButton);
 
-        scrollTrigger:{
+// window.addEventListener("scroll",()=>{
 
-            trigger:image,
+//     if(window.scrollY>600){
 
-            start:"top bottom",
+//         topButton.classList.add("show");
 
-            end:"bottom top",
+//     }else{
 
-            scrub:true
+//         topButton.classList.remove("show");
 
-        }
+//     }
+
+// });
+
+topButton.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
 
     });
 
 });
 
-/*==================================================
-            NAVBAR BLUR
-==================================================*/
+/*=========================================
+MOBILE OPTIMIZATION
+=========================================*/
 
-const header=document.querySelector("#header");
+function disableCursorOnMobile(){
 
-lenis.on("scroll",({scroll})=>{
+    if(window.innerWidth<=768){
 
-    if(scroll>60){
+        document.querySelector(".cursor")?.remove();
 
-        gsap.to(header,{
-
-            background:"rgba(5,5,5,.72)",
-
-            backdropFilter:"blur(18px)",
-
-            borderBottom:"1px solid rgba(255,255,255,.08)",
-
-            duration:.3
-
-        });
+        document.querySelector(".cursor-blur")?.remove();
 
     }
-
-    else{
-
-        gsap.to(header,{
-
-            background:"transparent",
-
-            backdropFilter:"blur(0px)",
-
-            borderBottom:"1px solid transparent",
-
-            duration:.3
-
-        });
-
-    }
-
-});
-
-/*==================================================
-            SMOOTH SCROLL
-==================================================*/
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-    anchor.addEventListener("click",(e)=>{
-
-        e.preventDefault();
-
-        const target=document.querySelector(
-
-            anchor.getAttribute("href")
-
-        );
-
-        if(target){
-
-            lenis.scrollTo(target,{
-
-                offset:-80,
-
-                duration:1.4
-
-            });
-
-        }
-
-    });
-
-});
-
-/*==================================================
-            ACTIVE NAVIGATION
-==================================================*/
-
-const sections=document.querySelectorAll("section");
-
-const navLinks=document.querySelectorAll(".nav-links a");
-
-sections.forEach(section=>{
-
-    ScrollTrigger.create({
-
-        trigger:section,
-
-        start:"top center",
-
-        end:"bottom center",
-
-        onEnter:()=>setActive(section.id),
-
-        onEnterBack:()=>setActive(section.id)
-
-    });
-
-});
-
-function setActive(id){
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#" + id){
-
-            link.classList.add("active");
-
-        }
-
-    });
 
 }
 
-/*==================================================
-            REFRESH
-==================================================*/
+/*=========================================
+WINDOW RESIZE
+=========================================*/
 
-window.addEventListener("load",()=>{
+window.addEventListener("resize",()=>{
 
-    ScrollTrigger.refresh();
+    disableCursorOnMobile();
 
 });
 
-/*==================================================
-            READY
-==================================================*/
+/*=========================================
+CONSOLE MESSAGE
+=========================================*/
 
 console.log(
 
-"%c🚀 Roadmap.io Loaded Successfully",
+"%c🚀 CuraOne | Roadmap.io | OneDesk",
 
-"color:#00ff99;font-size:16px;font-weight:bold;"
+"color:#ffffff;font-size:18px;font-weight:bold;"
+
+);
+
+console.log(
+
+"%cDesigned & Developed by Koushik",
+
+"color:#888;font-size:13px;"
 
 );

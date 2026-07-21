@@ -1,0 +1,809 @@
+/*==================================================
+RESPONSIVE - PART 1
+Laptop & Tablet
+==================================================*/
+
+/*====================================
+1200px
+====================================*/
+
+@media (max-width:1200px){
+
+.container{
+    width:min(94%,1200px);
+}
+
+.hero-container{
+    gap:4rem;
+}
+
+.about-grid{
+    gap:4rem;
+}
+
+.tech-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.hero-stats{
+    gap:1rem;
+}
+
+.featured-project{
+    gap:3rem;
+}
+
+.project-grid{
+    gap:1.5rem;
+}
+
+.contact-wrapper{
+    gap:1.5rem;
+}
+
+.footer-top{
+    gap:2rem;
+}
+
+}
+
+
+/*====================================
+992px
+====================================*/
+
+@media (max-width:992px){
+
+/* NAVBAR */
+
+.nav-links{
+    gap:1.5rem;
+}
+
+.resume-btn{
+    padding:14px 26px;
+}
+
+/* HERO */
+
+.hero{
+    padding-top:140px;
+}
+
+.hero-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:4rem;
+
+}
+
+.hero-left{
+
+    order:2;
+
+}
+
+.hero-center{
+
+    order:1;
+
+}
+
+.hero-left p{
+
+    margin:0 auto 2rem;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-role{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:2rem;
+
+    text-align:center;
+
+}
+
+/* ABOUT */
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+    gap:3rem;
+
+}
+
+.about-heading{
+
+    text-align:center;
+
+}
+
+.about-heading h2{
+
+    margin:auto;
+
+}
+
+.about-content{
+
+    text-align:center;
+
+}
+
+/* STATS */
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* TECH */
+
+.tech-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+/* FEATURED PROJECT */
+
+.featured-project{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.featured-left p{
+
+    margin:auto auto 2rem;
+
+}
+
+.featured-tags{
+
+    justify-content:center;
+
+}
+
+/* PROJECT GRID */
+
+.project-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+/* JOURNEY */
+
+.journey-card{
+
+    grid-template-columns:120px 1fr;
+
+    gap:2rem;
+
+    padding:2.5rem;
+
+}
+
+.journey-year{
+
+    font-size:2.8rem;
+
+}
+
+/* CONTACT */
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-cta{
+
+    text-align:center;
+
+}
+
+/* FOOTER */
+
+.footer-top{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+    text-align:center;
+
+}
+
+}
+/*==================================================
+RESPONSIVE - PART 2
+Tablet & Mobile
+==================================================*/
+
+
+/*====================================
+768px
+====================================*/
+
+@media (max-width:768px){
+
+section{
+    padding:90px 0;
+}
+
+/* HEADER */
+
+.navbar{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1.5rem;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* HERO */
+
+.hero{
+    min-height:auto;
+    padding-top:120px;
+}
+
+.hero-title{
+    font-size:clamp(3rem,10vw,4.5rem);
+    letter-spacing:-2px;
+}
+
+.hero-left p{
+    font-size:.95rem;
+}
+
+.hero-stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.hero-stats h2{
+    font-size:2rem;
+}
+
+/* ABOUT */
+
+.about-heading h2{
+    font-size:2.3rem;
+}
+
+.about-content p{
+    font-size:.95rem;
+}
+
+/* STATS */
+
+.stats-grid{
+    grid-template-columns:1fr;
+}
+
+/* TECH */
+
+.tech-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.tech-card{
+    padding:2rem 1rem;
+}
+
+.tech-card i{
+    font-size:2.4rem;
+}
+
+/* FEATURED PROJECT */
+
+.featured-project{
+    padding:2rem;
+}
+
+.featured-left h2{
+    font-size:2rem;
+}
+
+.featured-right{
+    order:-1;
+}
+
+/* PROJECT GRID */
+
+.project-info{
+    padding:1.5rem;
+}
+
+.project-info h3{
+    font-size:1.4rem;
+}
+
+/* JOURNEY */
+
+.journey-card{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:1.5rem;
+
+    padding:2rem;
+
+}
+
+.journey-year{
+
+    font-size:3rem;
+
+}
+
+.journey-tags{
+
+    justify-content:center;
+
+}
+
+/* CONTACT */
+
+.contact-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.contact-cta{
+
+    padding:2rem;
+
+}
+
+.contact-cta h3{
+
+    font-size:1.6rem;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    padding:60px 0 30px;
+
+}
+
+.footer-logo p{
+
+    margin:auto;
+
+}
+
+}
+
+
+/*====================================
+576px
+====================================*/
+
+@media (max-width:576px){
+
+.container{
+    width:92%;
+}
+
+/* HERO */
+
+.hero-title{
+
+    font-size:2.7rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+}
+
+.hero-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-stats div{
+
+    padding:1rem 0;
+
+}
+
+/* ABOUT */
+
+.about-heading h2{
+
+    font-size:2rem;
+
+}
+
+/* SECTION TITLE */
+
+.section-title h2{
+
+    font-size:2rem;
+
+}
+
+.section-title p{
+
+    font-size:.95rem;
+
+}
+
+/* TECH */
+
+.tech-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+/* PROJECT */
+
+.featured-project{
+
+    padding:1.5rem;
+
+}
+
+.featured-left h2{
+
+    font-size:1.8rem;
+
+}
+
+.project-grid{
+
+    gap:1.5rem;
+
+}
+
+/* JOURNEY */
+
+.journey-card{
+
+    padding:1.5rem;
+
+}
+
+.journey-year{
+
+    font-size:2.5rem;
+
+}
+
+.journey-content h3{
+
+    font-size:1.4rem;
+
+}
+
+/* CONTACT */
+
+.contact-card{
+
+    padding:1.5rem;
+
+}
+
+.contact-card h3{
+
+    font-size:1rem;
+
+}
+
+/* FOOTER */
+
+.footer-links{
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+/* SOCIAL BAR */
+
+.social-bar{
+
+    display:none;
+
+}
+
+}
+/*==================================================
+RESPONSIVE - PART 3
+Small Mobile
+==================================================*/
+
+@media (max-width:400px){
+
+/* GLOBAL */
+
+section{
+    padding:70px 0;
+}
+
+.container{
+    width:94%;
+}
+
+/* HEADER */
+
+.logo{
+    font-size:1.5rem;
+}
+
+.nav-links{
+    gap:1rem;
+}
+
+.nav-links a{
+    font-size:.85rem;
+}
+
+.resume-btn{
+    padding:12px 20px;
+    font-size:.85rem;
+}
+
+/* HERO */
+
+.hero{
+    padding-top:100px;
+}
+
+.hero-title{
+    font-size:2.2rem;
+    letter-spacing:-1px;
+}
+
+.hero-tag{
+    font-size:.75rem;
+    padding:.6rem 1rem;
+}
+
+.hero-role{
+    font-size:.75rem;
+    letter-spacing:1px;
+}
+
+.hero-left p{
+    font-size:.9rem;
+    line-height:1.7;
+}
+
+.hero-avatar{
+    border-radius:18px;
+}
+
+.hero-stats h2{
+    font-size:1.8rem;
+}
+
+.hero-stats span{
+    font-size:.8rem;
+}
+
+/* ABOUT */
+
+.about-heading h2{
+    font-size:1.8rem;
+}
+
+.about-content p{
+    font-size:.9rem;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    margin-bottom:3rem;
+}
+
+.section-title h2{
+    font-size:1.8rem;
+}
+
+.section-title span{
+    font-size:.75rem;
+}
+
+.section-title p{
+    font-size:.9rem;
+}
+
+/* STATS */
+
+.stat-card{
+    padding:1.5rem;
+}
+
+.stat-card h3{
+    font-size:2rem;
+}
+
+/* TECH */
+
+.tech-card{
+    padding:1.6rem 1rem;
+}
+
+.tech-card i{
+    font-size:2rem;
+}
+
+.tech-card h3{
+    font-size:1rem;
+}
+
+/* PROJECT */
+
+.featured-project{
+    padding:1.2rem;
+}
+
+.featured-left h2{
+    font-size:1.6rem;
+}
+
+.featured-left p{
+    font-size:.9rem;
+}
+
+.featured-tags span{
+    padding:.55rem .9rem;
+    font-size:.75rem;
+}
+
+.project-info{
+    padding:1.2rem;
+}
+
+.project-info h3{
+    font-size:1.2rem;
+}
+
+.project-info span{
+    font-size:.75rem;
+}
+
+/* JOURNEY */
+
+.journey-card{
+    padding:1.3rem;
+}
+
+.journey-year{
+    font-size:2rem;
+}
+
+.journey-content h3{
+    font-size:1.3rem;
+}
+
+.journey-content p{
+    font-size:.9rem;
+}
+
+.journey-tags span{
+    font-size:.75rem;
+    padding:.55rem .9rem;
+}
+
+/* CONTACT */
+
+.contact-card{
+    padding:1.3rem;
+}
+
+.contact-card i{
+    font-size:1.5rem;
+}
+
+.contact-card h3{
+    font-size:.95rem;
+}
+
+.contact-cta{
+    padding:1.5rem;
+}
+
+.contact-cta h3{
+    font-size:1.4rem;
+}
+
+.contact-cta p{
+    font-size:.9rem;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:50px 0 25px;
+}
+
+.footer-logo h2{
+    font-size:1.5rem;
+}
+
+.footer-logo p{
+    font-size:.9rem;
+}
+
+.footer-links a{
+    font-size:.9rem;
+}
+
+.footer-social a{
+    width:40px;
+    height:40px;
+}
+
+}

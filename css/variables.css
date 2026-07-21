@@ -1,0 +1,60 @@
+/*==================================================
+GOOGLE FONTS
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/*==================================================
+ROOT VARIABLES
+==================================================*/
+
+:root{
+
+    /* Colors */
+
+    --bg:#050505;
+    --surface:#0c0c0c;
+    --surface-light:#121212;
+
+    --white:#ffffff;
+    --text:#b3b3b3;
+    --text-light:#8a8a8a;
+
+    --border:rgba(255,255,255,.08);
+
+    /* Accent */
+
+    --accent:#ffffff;
+    --success:#37d66b;
+
+    /* Typography */
+
+    --font-primary:"Inter",sans-serif;
+    --font-heading:"Space Grotesk",sans-serif;
+
+    /* Layout */
+
+    --container:1260px;
+    --section-padding:100px;
+    --radius:24px;
+    --radius-sm:16px;
+    --radius-lg:32px;
+
+    /* Shadows */
+
+    --shadow-sm:0 8px 20px rgba(0,0,0,.15);
+
+    --shadow-md:0 12px 35px rgba(0,0,0,.22);
+
+    --shadow-lg:0 20px 60px rgba(0,0,0,.35);
+
+    /* Blur */
+
+    --blur:18px;
+
+    /* Animation */
+
+    --transition:.35s ease;
+    --transition-slow:.6s ease;
+
+}

@@ -34,15 +34,18 @@ window.addEventListener("load", () => {
 
     })
 
-    .from("header",{
-
-        y:-80,
-
-        opacity:0,
-
-        duration:.8
-
-    },"-=.5")
+   .fromTo("#header",
+{
+    y:-80,
+    opacity:0
+},
+{
+    y:0,
+    opacity:1,
+    duration:.8,
+    ease:"power3.out",
+    clearProps:"transform,opacity"
+})
 
    .from(".hero-left > *", {
     y:40,
@@ -94,15 +97,8 @@ const lenis = new Lenis({
 
 });
 
-function raf(time){
 
-    lenis.raf(time);
 
-    requestAnimationFrame(raf);
-
-}
-
-requestAnimationFrame(raf);
 
 lenis.on("scroll", ScrollTrigger.update);
 
@@ -1070,3 +1066,133 @@ console.log(
 "color:#00ff99;font-size:16px;font-weight:bold;"
 
 );
+// /*==================================================
+// PORTFOLIO V4.1
+// ==================================================*/
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+//     /*==========================================
+//     NAVBAR SCROLL
+//     ==========================================*/
+
+//     const header = document.getElementById("header");
+
+//     window.addEventListener("scroll", () => {
+
+//         if (window.scrollY > 50) {
+//             header.classList.add("header-scroll");
+//         } else {
+//             header.classList.remove("header-scroll");
+//         }
+
+//     });
+
+
+//     /*==========================================
+//     BACK TO TOP
+//     ==========================================*/
+
+//     const backTop = document.querySelector(".back-top");
+
+//     if (backTop) {
+
+//         window.addEventListener("scroll", () => {
+
+//             if (window.scrollY > 500) {
+//                 backTop.classList.add("show");
+//             } else {
+//                 backTop.classList.remove("show");
+//             }
+
+//         });
+
+//         backTop.addEventListener("click", () => {
+
+//             window.scrollTo({
+//                 top: 0,
+//                 behavior: "smooth"
+//             });
+
+//         });
+
+//     }
+
+
+//     /*==========================================
+//     ACTIVE NAV LINK
+//     ==========================================*/
+
+//     const sections = document.querySelectorAll("section[id]");
+//     const navLinks = document.querySelectorAll(".nav-links a");
+
+//     function activeMenu() {
+
+//         let current = "";
+
+//         sections.forEach(section => {
+
+//             const top = section.offsetTop - 120;
+//             const height = section.offsetHeight;
+
+//             if (window.scrollY >= top && window.scrollY < top + height) {
+//                 current = section.getAttribute("id");
+//             }
+
+//         });
+
+//         navLinks.forEach(link => {
+
+//             link.classList.remove("active");
+
+//             if (link.getAttribute("href") === "#" + current) {
+//                 link.classList.add("active");
+//             }
+
+//         });
+
+//     }
+
+//     window.addEventListener("scroll", activeMenu);
+
+
+//     /*==========================================
+//     SCROLL REVEAL
+//     ==========================================*/
+
+//     const reveals = document.querySelectorAll(
+//         ".fade-up,.fade-down,.fade-left,.fade-right"
+//     );
+
+//     const observer = new IntersectionObserver((entries) => {
+
+//         entries.forEach(entry => {
+
+//             if (entry.isIntersecting) {
+
+//                 entry.target.classList.add("show");
+
+//             }
+
+//         });
+
+//     }, {
+//         threshold: 0.2
+//     });
+
+//     reveals.forEach(item => observer.observe(item));
+
+
+//     /*==========================================
+//     CURRENT YEAR
+//     ==========================================*/
+
+//     const year = document.getElementById("year");
+
+//     if (year) {
+
+//         year.textContent = new Date().getFullYear();
+
+//     }
+
+// });
